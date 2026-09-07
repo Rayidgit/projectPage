@@ -5,29 +5,21 @@ export const TeamSection: React.FC = () => {
   const teamMembers = [
     {
       name: 'M.F.M. FAZLY',
-      regNo: 'E/21/130',
-      role: 'Hardware & Circuit Engineer',
       cnLink: 'https://thecn.com/EF509',
       image: '/assets/team/fazly.png'
     },
     {
       name: 'A.H.M. RAYID',
-      regNo: 'E/21/335',
-      role: 'IoT Edge & Gateway Developer',
       cnLink: 'https://thecn.com/ER757',
       image: '/assets/team/rayid.png'
     },
     {
       name: 'R.M. RINOS',
-      regNo: 'E/21/336',
-      role: 'Backend & Cloud Systems Engineer',
       cnLink: 'https://thecn.com/ER760',
       image: '/assets/team/rinos.png'
     },
     {
       name: 'A.M.M. SAABITH',
-      regNo: 'E/21/342',
-      role: 'Mobile Frontend & UX Designer',
       cnLink: 'https://thecn.com/SM3230',
       image: '/assets/team/saabith.png'
     }
@@ -40,8 +32,8 @@ export const TeamSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* Left-Aligned Section Header */}
+        <div className="text-left max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
             CluckNet · Group 18
           </div>
@@ -68,17 +60,11 @@ export const TeamSection: React.FC = () => {
                     alt={member.name}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-2.5 right-2.5">
-                    <span className="text-[11px] font-mono font-bold px-2.5 py-1 rounded-full bg-white/90 text-emerald-800 border border-emerald-200 shadow-sm backdrop-blur-md">
-                      {member.regNo}
-                    </span>
-                  </div>
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-900 mb-1 group-hover:text-emerald-700 transition-colors">
+                <h3 className="text-lg font-bold text-slate-900 mb-4 group-hover:text-emerald-700 transition-colors">
                   {member.name}
                 </h3>
-                <div className="text-xs font-semibold text-slate-500 mb-4">{member.role}</div>
               </div>
 
               <div className="pt-4 border-t border-slate-100 flex items-center justify-between">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Cpu, Code2, Lock, Zap, Check } from 'lucide-react';
+import { Cpu, Code2, Lock, Zap } from 'lucide-react';
 
 export const HardwareSoftware: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'hardware' | 'software'>('hardware');
@@ -30,8 +30,8 @@ export const HardwareSoftware: React.FC = () => {
     <section id="hardware-software" className="py-24 relative bg-white border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        {/* Left-Aligned Section Header */}
+        <div className="text-left max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
             <Cpu className="w-3.5 h-3.5" />
             Engineering Specifications
@@ -45,7 +45,7 @@ export const HardwareSoftware: React.FC = () => {
         </div>
 
         {/* Toggle Selector Tabs */}
-        <div className="flex items-center justify-center gap-3 mb-12">
+        <div className="flex items-center justify-start gap-3 mb-12">
           <button
             onClick={() => setActiveTab('hardware')}
             className={`flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold transition-all shadow-sm ${

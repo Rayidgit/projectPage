@@ -84,8 +84,8 @@ export const SolutionArchitecture: React.FC = () => {
     <section id="solution-architecture" className="py-24 relative bg-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* Left-Aligned Section Header */}
+        <div className="text-left max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
             <Zap className="w-3.5 h-3.5" />
             End-to-End System Architecture

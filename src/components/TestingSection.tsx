@@ -8,8 +8,8 @@ export const TestingSection: React.FC = () => {
     <section id="testing" className="py-24 relative bg-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        {/* Left-Aligned Section Header */}
+        <div className="text-left max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4">
             <Camera className="w-3.5 h-3.5" />
             Verification & Quality Assurance
@@ -23,7 +23,7 @@ export const TestingSection: React.FC = () => {
         </div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-start gap-2 mb-12">
           <button
             onClick={() => setActiveTab('hardware')}
             className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${
