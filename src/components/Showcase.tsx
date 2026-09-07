@@ -22,7 +22,7 @@ export const Showcase: React.FC = () => {
   return (
     <section id="showcase" className="py-24 relative bg-slate-950/90 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
@@ -41,41 +41,37 @@ export const Showcase: React.FC = () => {
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           <button
             onClick={() => setActiveTab('hardware')}
-            className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${
-              activeTab === 'hardware'
+            className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${activeTab === 'hardware'
                 ? 'bg-emerald-500 text-cluck-navy shadow-lg shadow-emerald-500/20'
                 : 'bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10'
-            }`}
+              }`}
           >
             Hardware Testing & PCB
           </button>
           <button
             onClick={() => setActiveTab('mobile')}
-            className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${
-              activeTab === 'mobile'
+            className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${activeTab === 'mobile'
                 ? 'bg-emerald-500 text-cluck-navy shadow-lg shadow-emerald-500/20'
                 : 'bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10'
-            }`}
+              }`}
           >
             Flutter Mobile UI
           </button>
           <button
             onClick={() => setActiveTab('testing')}
-            className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${
-              activeTab === 'testing'
+            className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${activeTab === 'testing'
                 ? 'bg-emerald-500 text-cluck-navy shadow-lg shadow-emerald-500/20'
                 : 'bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10'
-            }`}
+              }`}
           >
             Software Unit Tests
           </button>
           <button
             onClick={() => setActiveTab('budget')}
-            className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${
-              activeTab === 'budget'
+            className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${activeTab === 'budget'
                 ? 'bg-emerald-500 text-cluck-navy shadow-lg shadow-emerald-500/20'
                 : 'bg-white/5 text-slate-300 border border-white/10 hover:bg-white/10'
-            }`}
+              }`}
           >
             Zone Hardware Budget
           </button>
@@ -86,8 +82,8 @@ export const Showcase: React.FC = () => {
           <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 bg-slate-900/90">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between pb-6 mb-6 border-b border-white/10 gap-4">
               <div>
-                <h3 className="text-xl font-bold text-white mb-1">Physical Hardware PCB & Multimeter Testing</h3>
-                <p className="text-xs text-slate-300">Empirical measurement of supply voltage rails (10.78V DC raw battery bus & 4.99V DC regulated logic bus).</p>
+                <h3 className="text-xl font-bold text-white mb-1">Hardware Testing</h3>
+                <p className="text-xs text-slate-300">Measuring the actual supply voltages.</p>
               </div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
                 <CheckCircle2 className="w-4 h-4" /> Voltage Verification Passed

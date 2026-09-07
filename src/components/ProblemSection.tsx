@@ -17,7 +17,7 @@ export const ProblemSection: React.FC = () => {
       <div className="absolute top-1/2 left-0 w-72 h-72 bg-red-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-xs font-semibold uppercase tracking-wider mb-4">
@@ -34,7 +34,7 @@ export const ProblemSection: React.FC = () => {
 
         {/* 3 Core Problem Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          
+
           {/* Pillar 1: Temperature & Brooding Curve */}
           <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 relative overflow-hidden flex flex-col justify-between">
             <div>
@@ -122,7 +122,7 @@ export const ProblemSection: React.FC = () => {
 
         {/* Visual Reference Diagram Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          
+
           {/* Brooding Temperature Curve Graphic */}
           <div className="glass-panel p-6 rounded-3xl border border-white/10 bg-slate-900/80">
             <div className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">Brooding Environmental Degradation</div>
@@ -154,7 +154,7 @@ export const ProblemSection: React.FC = () => {
         {/* Visual Behavior Reference Box */}
         <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 bg-gradient-to-r from-slate-900/90 to-cluck-navy/90">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-            
+
             <div className="md:col-span-4">
               <div className="flex items-center gap-2 text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">
                 <Skull className="w-4 h-4" />

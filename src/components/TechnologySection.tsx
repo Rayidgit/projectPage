@@ -112,7 +112,7 @@ export const TechnologySection: React.FC = () => {
   return (
     <section id="technology" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
@@ -139,11 +139,10 @@ export const TechnologySection: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveCategory(tab.id as any)}
-              className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-200 ${
-                activeCategory === tab.id
+              className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all duration-200 ${activeCategory === tab.id
                   ? 'bg-emerald-500 text-cluck-navy shadow-lg shadow-emerald-500/20'
                   : 'bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10'
-              }`}
+                }`}
             >
               {tab.label}
             </button>
@@ -182,7 +181,7 @@ export const TechnologySection: React.FC = () => {
 
         {/* Highlight Box: Security & Power Schematics Diagrams */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
+
           {/* Security Deep Dive with Visual Architecture Diagram */}
           <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 bg-slate-900/80 flex flex-col justify-between">
             <div>

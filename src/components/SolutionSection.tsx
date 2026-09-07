@@ -10,7 +10,7 @@ export const SolutionSection: React.FC = () => {
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
@@ -27,18 +27,17 @@ export const SolutionSection: React.FC = () => {
 
         {/* Interactive Feature Triad Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
-          
+
           {/* Left Feature Selector */}
           <div className="lg:col-span-5 space-y-4">
-            
+
             {/* Feature 1: Real-Time Monitoring */}
             <div
               onClick={() => setActiveTab('monitor')}
-              className={`p-6 rounded-3xl cursor-pointer transition-all duration-300 border ${
-                activeTab === 'monitor'
+              className={`p-6 rounded-3xl cursor-pointer transition-all duration-300 border ${activeTab === 'monitor'
                   ? 'bg-slate-900 border-emerald-500/50 shadow-lg shadow-emerald-500/10 scale-[1.02]'
                   : 'glass-panel border-white/10 hover:border-white/20 opacity-80'
-              }`}
+                }`}
             >
               <div className="flex items-start gap-4">
                 <div className={`p-3 rounded-2xl ${activeTab === 'monitor' ? 'bg-emerald-500 text-cluck-navy' : 'bg-white/5 text-emerald-400'}`}>
@@ -59,11 +58,10 @@ export const SolutionSection: React.FC = () => {
             {/* Feature 2: Intelligent Detection */}
             <div
               onClick={() => setActiveTab('detect')}
-              className={`p-6 rounded-3xl cursor-pointer transition-all duration-300 border ${
-                activeTab === 'detect'
+              className={`p-6 rounded-3xl cursor-pointer transition-all duration-300 border ${activeTab === 'detect'
                   ? 'bg-slate-900 border-blue-500/50 shadow-lg shadow-blue-500/10 scale-[1.02]'
                   : 'glass-panel border-white/10 hover:border-white/20 opacity-80'
-              }`}
+                }`}
             >
               <div className="flex items-start gap-4">
                 <div className={`p-3 rounded-2xl ${activeTab === 'detect' ? 'bg-blue-500 text-cluck-navy' : 'bg-white/5 text-blue-400'}`}>
@@ -84,11 +82,10 @@ export const SolutionSection: React.FC = () => {
             {/* Feature 3: Smart Response */}
             <div
               onClick={() => setActiveTab('respond')}
-              className={`p-6 rounded-3xl cursor-pointer transition-all duration-300 border ${
-                activeTab === 'respond'
+              className={`p-6 rounded-3xl cursor-pointer transition-all duration-300 border ${activeTab === 'respond'
                   ? 'bg-slate-900 border-amber-500/50 shadow-lg shadow-amber-500/10 scale-[1.02]'
                   : 'glass-panel border-white/10 hover:border-white/20 opacity-80'
-              }`}
+                }`}
             >
               <div className="flex items-start gap-4">
                 <div className={`p-3 rounded-2xl ${activeTab === 'respond' ? 'bg-amber-500 text-cluck-navy' : 'bg-white/5 text-amber-400'}`}>
@@ -111,7 +108,7 @@ export const SolutionSection: React.FC = () => {
           {/* Right Product Image Showcase */}
           <div className="lg:col-span-7 relative">
             <div className="glass-panel p-4 sm:p-6 rounded-3xl border border-white/15 bg-slate-900/90 shadow-2xl relative">
-              
+
               {/* Product Photo */}
               <div className="relative rounded-2xl overflow-hidden aspect-[16/10] bg-slate-950 border border-white/10 mb-6">
                 <img
@@ -119,7 +116,7 @@ export const SolutionSection: React.FC = () => {
                   alt="CluckNet Physical Device Box and Servo Motor"
                   className="w-full h-full object-cover"
                 />
-                
+
                 {/* Active Highlight Overlay Badges based on selected Tab */}
                 {activeTab === 'monitor' && (
                   <div className="absolute top-4 left-4 bg-emerald-500 text-cluck-navy px-3.5 py-1.5 rounded-full text-xs font-extrabold flex items-center gap-2 shadow-lg animate-fade-in">

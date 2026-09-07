@@ -93,7 +93,7 @@ export const HowItWorks: React.FC = () => {
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-emerald-500/5 blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
@@ -114,7 +114,7 @@ export const HowItWorks: React.FC = () => {
             <span>Verified System Architecture Schema</span>
             <span className="text-emerald-400 font-mono">AWS IoT Core + Spring Boot</span>
           </div>
-          
+
           <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10">
             <img
               src="/assets/system architecture.png"
@@ -135,11 +135,10 @@ export const HowItWorks: React.FC = () => {
                 key={node.id}
                 onClick={() => setSelectedNode(node.id)}
                 onMouseEnter={() => setSelectedNode(node.id)}
-                className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 border ${
-                  isSelected
+                className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 border ${isSelected
                     ? 'bg-slate-900 border-emerald-500 shadow-lg shadow-emerald-500/15 scale-[1.03]'
                     : 'glass-panel border-white/10 hover:border-white/20'
-                }`}
+                  }`}
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs font-mono font-bold text-slate-500">{node.step}</span>
