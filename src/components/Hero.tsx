@@ -26,17 +26,6 @@ export const Hero: React.FC = () => {
         {/* Left-Aligned Hero Container */}
         <div className="max-w-4xl text-left flex flex-col items-start">
           
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 mb-6 shadow-sm">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-600"></span>
-            </span>
-            <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider font-mono">
-              ESP32 Edge Mesh · AWS IoT Core Online
-            </span>
-          </div>
-
           {/* Hero Main Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.12] mb-6">
             Cluck<span className="text-emerald-600">Net</span>
@@ -72,23 +61,23 @@ export const Hero: React.FC = () => {
 
           {/* Quick Spec Highlights Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-10 border-t border-slate-200/80 w-full max-w-4xl">
-            <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-left">
-              <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-sans mb-1">99.9%</div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-slate-400 group cursor-pointer">
+              <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 font-sans mb-1 group-hover:scale-105 transition-transform duration-300">99.9%</div>
               <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Uptime Guarantee</div>
             </div>
 
-            <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-left">
-              <div className="text-2xl sm:text-3xl font-extrabold text-emerald-600 font-sans mb-1">&lt; 100ms</div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-emerald-500 hover:shadow-emerald-500/10 group cursor-pointer">
+              <div className="text-2xl sm:text-3xl font-extrabold text-emerald-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300">&lt; 100ms</div>
               <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">ESP-NOW Latency</div>
             </div>
 
-            <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-left">
-              <div className="text-2xl sm:text-3xl font-extrabold text-blue-600 font-sans mb-1">Dual-Layer</div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-500 hover:shadow-blue-500/10 group cursor-pointer">
+              <div className="text-2xl sm:text-3xl font-extrabold text-blue-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300">Dual-Layer</div>
               <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">Battery Failover</div>
             </div>
 
-            <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm text-left">
-              <div className="text-2xl sm:text-3xl font-extrabold text-amber-600 font-sans mb-1">Auto-Cut</div>
+            <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-amber-500 hover:shadow-amber-500/10 group cursor-pointer">
+              <div className="text-2xl sm:text-3xl font-extrabold text-amber-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300">Auto-Cut</div>
               <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">180° Servo Valve</div>
             </div>
           </div>

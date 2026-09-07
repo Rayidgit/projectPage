@@ -17,7 +17,7 @@ export const HardwareSoftware: React.FC = () => {
 
   const softwareItems = [
     { name: 'Spring Boot (Java)', role: 'Core Backend Framework', specs: 'AWS EC2 Hosted · REST APIs & MQTT Threads' },
-    { name: 'AWS IoT Core / HiveMQ', role: 'Cloud MQTT Broker', specs: 'MQTT over TLS · Topic clucknet/aws/data' },
+    { name: 'AWS IoT Core', role: 'Cloud MQTT Broker', specs: 'MQTT over TLS · Topic clucknet/aws/data' },
     { name: 'MySQL Database', role: 'Relational User & Device Data', specs: 'AWS RDS Managed · Structured Storage' },
     { name: 'InfluxDB', role: 'Time-Series Telemetry DB', specs: 'High-speed Telemetry & Historical Analytics' },
     { name: 'Flutter Framework', role: 'Cross-Platform Mobile App', specs: 'iOS & Android · Real-Time Dashboard UI' },
@@ -75,10 +75,13 @@ export const HardwareSoftware: React.FC = () => {
           <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {hardwareItems.map((item, idx) => (
-                <div key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div
+                  key={idx}
+                  className="bg-slate-50 hover:bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-emerald-500/50 cursor-pointer group"
+                >
                   <div>
                     <span className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider block mb-1">{item.role}</span>
-                    <h3 className="text-base font-bold text-slate-900 mb-2">{item.name}</h3>
+                    <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">{item.name}</h3>
                   </div>
                   <div className="pt-3 border-t border-slate-200 text-[11px] font-mono text-slate-600">
                     {item.specs}
@@ -110,10 +113,13 @@ export const HardwareSoftware: React.FC = () => {
           <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {softwareItems.map((item, idx) => (
-                <div key={idx} className="bg-slate-50 p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+                <div
+                  key={idx}
+                  className="bg-slate-50 hover:bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-500/50 cursor-pointer group"
+                >
                   <div>
                     <span className="text-[10px] font-bold text-blue-700 uppercase tracking-wider block mb-1">{item.role}</span>
-                    <h3 className="text-base font-bold text-slate-900 mb-2">{item.name}</h3>
+                    <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">{item.name}</h3>
                   </div>
                   <div className="pt-3 border-t border-slate-200 text-[11px] font-mono text-slate-600">
                     {item.specs}

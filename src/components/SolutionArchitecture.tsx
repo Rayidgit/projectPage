@@ -13,7 +13,14 @@ export const SolutionArchitecture: React.FC = () => {
       subtitle: 'SHT30, MQ135 & MQ6',
       icon: Radio,
       badge: 'I2C & Analog',
-      desc: 'SHT30 measures temperature & humidity via I2C. MQ135 measures ammonia (NH₃), and MQ6 detects LPG gas levels.'
+      desc: 'SHT30 measures temperature & humidity via I2C. MQ135 measures ammonia (NH₃), and MQ6 detects LPG gas levels.',
+      activeClass: 'bg-emerald-50/90 border-emerald-500 shadow-md ring-2 ring-emerald-500/20 scale-[1.02]',
+      hoverClass: 'hover:border-emerald-500 hover:bg-emerald-50/50 hover:-translate-y-1.5 hover:shadow-lg',
+      iconActive: 'bg-emerald-600 text-white',
+      iconDefault: 'bg-emerald-100 text-emerald-700',
+      detailBoxClass: 'bg-emerald-50/40 border-emerald-400 shadow-emerald-500/10',
+      detailTitleClass: 'text-emerald-900',
+      badgeClass: 'bg-emerald-100 text-emerald-800 border-emerald-200'
     },
     {
       id: 2,
@@ -22,7 +29,14 @@ export const SolutionArchitecture: React.FC = () => {
       subtitle: 'ESP32 Microcontroller',
       icon: Cpu,
       badge: 'Local Control',
-      desc: 'Processes signals locally. Immediately activates local buzzer alarm and 180° servo motor to close gas valve on danger.'
+      desc: 'Processes signals locally. Immediately activates local buzzer alarm and 180° servo motor to close gas valve on danger.',
+      activeClass: 'bg-blue-50/90 border-blue-500 shadow-md ring-2 ring-blue-500/20 scale-[1.02]',
+      hoverClass: 'hover:border-blue-500 hover:bg-blue-50/50 hover:-translate-y-1.5 hover:shadow-lg',
+      iconActive: 'bg-blue-600 text-white',
+      iconDefault: 'bg-blue-100 text-blue-700',
+      detailBoxClass: 'bg-blue-50/40 border-blue-400 shadow-blue-500/10',
+      detailTitleClass: 'text-blue-900',
+      badgeClass: 'bg-blue-100 text-blue-800 border-blue-200'
     },
     {
       id: 3,
@@ -31,7 +45,14 @@ export const SolutionArchitecture: React.FC = () => {
       subtitle: 'Low Latency Link',
       icon: Wifi,
       badge: 'Encrypted Link',
-      desc: 'Transmits telemetry packets over encrypted peer-to-peer ESP-NOW protocol directly to gateway without internet.'
+      desc: 'Transmits telemetry packets over encrypted peer-to-peer ESP-NOW protocol directly to gateway without internet.',
+      activeClass: 'bg-teal-50/90 border-teal-500 shadow-md ring-2 ring-teal-500/20 scale-[1.02]',
+      hoverClass: 'hover:border-teal-500 hover:bg-teal-50/50 hover:-translate-y-1.5 hover:shadow-lg',
+      iconActive: 'bg-teal-600 text-white',
+      iconDefault: 'bg-teal-100 text-teal-700',
+      detailBoxClass: 'bg-teal-50/40 border-teal-400 shadow-teal-500/10',
+      detailTitleClass: 'text-teal-900',
+      badgeClass: 'bg-teal-100 text-teal-800 border-teal-200'
     },
     {
       id: 4,
@@ -40,16 +61,30 @@ export const SolutionArchitecture: React.FC = () => {
       subtitle: 'WiFi Internet Bridge',
       icon: Wifi,
       badge: 'MQTT Bridge',
-      desc: 'Forwards ESP-NOW local data packages over WiFi to cloud MQTT broker over TLS encrypted connection.'
+      desc: 'Forwards ESP-NOW local data packages over WiFi to cloud MQTT broker over TLS encrypted connection.',
+      activeClass: 'bg-amber-50/90 border-amber-500 shadow-md ring-2 ring-amber-500/20 scale-[1.02]',
+      hoverClass: 'hover:border-amber-500 hover:bg-amber-50/50 hover:-translate-y-1.5 hover:shadow-lg',
+      iconActive: 'bg-amber-600 text-white',
+      iconDefault: 'bg-amber-100 text-amber-700',
+      detailBoxClass: 'bg-amber-50/40 border-amber-400 shadow-amber-500/10',
+      detailTitleClass: 'text-amber-900',
+      badgeClass: 'bg-amber-100 text-amber-800 border-amber-200'
     },
     {
       id: 5,
       step: '05',
       title: 'Cloud MQTT Broker',
-      subtitle: 'AWS IoT Core / HiveMQ',
+      subtitle: 'AWS IoT Core',
       icon: Cloud,
       badge: 'clucknet/aws/data',
-      desc: 'High-throughput cloud MQTT broker handling publish-subscribe message queues over port 8883.'
+      desc: 'High-throughput cloud MQTT broker handling publish-subscribe message queues over port 8883.',
+      activeClass: 'bg-indigo-50/90 border-indigo-500 shadow-md ring-2 ring-indigo-500/20 scale-[1.02]',
+      hoverClass: 'hover:border-indigo-500 hover:bg-indigo-50/50 hover:-translate-y-1.5 hover:shadow-lg',
+      iconActive: 'bg-indigo-600 text-white',
+      iconDefault: 'bg-indigo-100 text-indigo-700',
+      detailBoxClass: 'bg-indigo-50/40 border-indigo-400 shadow-indigo-500/10',
+      detailTitleClass: 'text-indigo-900',
+      badgeClass: 'bg-indigo-100 text-indigo-800 border-indigo-200'
     },
     {
       id: 6,
@@ -58,7 +93,14 @@ export const SolutionArchitecture: React.FC = () => {
       subtitle: 'Spring Boot Java',
       icon: ShieldCheck,
       badge: 'REST & MQTT',
-      desc: 'Hosted on AWS EC2. Subscribes to MQTT topics, executes business rules engine, and sends Firebase push notifications.'
+      desc: 'Hosted on AWS EC2. Subscribes to MQTT topics, executes business rules engine, and sends Firebase push notifications.',
+      activeClass: 'bg-purple-50/90 border-purple-500 shadow-md ring-2 ring-purple-500/20 scale-[1.02]',
+      hoverClass: 'hover:border-purple-500 hover:bg-purple-50/50 hover:-translate-y-1.5 hover:shadow-lg',
+      iconActive: 'bg-purple-600 text-white',
+      iconDefault: 'bg-purple-100 text-purple-700',
+      detailBoxClass: 'bg-purple-50/40 border-purple-400 shadow-purple-500/10',
+      detailTitleClass: 'text-purple-900',
+      badgeClass: 'bg-purple-100 text-purple-800 border-purple-200'
     },
     {
       id: 7,
@@ -67,23 +109,37 @@ export const SolutionArchitecture: React.FC = () => {
       subtitle: 'MySQL & InfluxDB',
       icon: Database,
       badge: 'Relational + Time-Series',
-      desc: 'MySQL stores users & devices. InfluxDB stores high-speed continuous sensor telemetry logs for trends.'
+      desc: 'MySQL stores users & devices. InfluxDB stores high-speed continuous sensor telemetry logs for trends.',
+      activeClass: 'bg-rose-50/90 border-rose-500 shadow-md ring-2 ring-rose-500/20 scale-[1.02]',
+      hoverClass: 'hover:border-rose-500 hover:bg-rose-50/50 hover:-translate-y-1.5 hover:shadow-lg',
+      iconActive: 'bg-rose-600 text-white',
+      iconDefault: 'bg-rose-100 text-rose-700',
+      detailBoxClass: 'bg-rose-50/40 border-rose-400 shadow-rose-500/10',
+      detailTitleClass: 'text-rose-900',
+      badgeClass: 'bg-rose-100 text-rose-800 border-rose-200'
     },
     {
       id: 8,
       step: '08',
       title: 'Mobile Dashboard',
-      subtitle: 'Flutter iOS / Android',
+      subtitle: 'Flutter Mobile App',
       icon: Smartphone,
       badge: 'Cross-Platform',
-      desc: 'Farmers monitor real-time zone cards, view telemetry charts, receive emergency push notifications, and issue remote controls.'
+      desc: 'Farmers monitor real-time zone cards, view telemetry charts, receive emergency push notifications, and issue remote controls.',
+      activeClass: 'bg-orange-50/90 border-orange-500 shadow-md ring-2 ring-orange-500/20 scale-[1.02]',
+      hoverClass: 'hover:border-orange-500 hover:bg-orange-50/50 hover:-translate-y-1.5 hover:shadow-lg',
+      iconActive: 'bg-orange-600 text-white',
+      iconDefault: 'bg-orange-100 text-orange-700',
+      detailBoxClass: 'bg-orange-50/40 border-orange-400 shadow-orange-500/10',
+      detailTitleClass: 'text-orange-900',
+      badgeClass: 'bg-orange-100 text-orange-800 border-orange-200'
     }
   ];
 
   return (
     <section id="solution-architecture" className="py-24 relative bg-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Left-Aligned Section Header */}
         <div className="text-left max-w-3xl mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
@@ -104,7 +160,7 @@ export const SolutionArchitecture: React.FC = () => {
             <span>Verified System Architecture Diagram</span>
             <span className="text-emerald-700 font-mono font-bold">AWS IoT Core + Spring Boot</span>
           </div>
-          
+
           <div className="rounded-2xl overflow-hidden bg-slate-50 border border-slate-200">
             <img
               src="/assets/system architecture.png"
@@ -125,10 +181,10 @@ export const SolutionArchitecture: React.FC = () => {
                 key={node.id}
                 onClick={() => setSelectedNode(node.id)}
                 onMouseEnter={() => setSelectedNode(node.id)}
-                className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 border ${
+                className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border ${
                   isSelected
-                    ? 'bg-white border-emerald-500 shadow-md scale-[1.02]'
-                    : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'
+                    ? node.activeClass
+                    : `bg-white border-slate-200 shadow-sm ${node.hoverClass}`
                 }`}
               >
                 <div className="flex items-center justify-between mb-3">
@@ -139,7 +195,7 @@ export const SolutionArchitecture: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-3 mb-1">
-                  <div className={`p-2 rounded-xl ${isSelected ? 'bg-emerald-600 text-white' : 'bg-emerald-50 text-emerald-700'}`}>
+                  <div className={`p-2 rounded-xl transition-colors duration-300 ${isSelected ? node.iconActive : node.iconDefault}`}>
                     <Icon className="w-4 h-4" />
                   </div>
                   <div>
@@ -153,66 +209,109 @@ export const SolutionArchitecture: React.FC = () => {
         </div>
 
         {/* Detail Inspection Box */}
-        {selectedNode && (
-          <div className="bg-white p-6 rounded-3xl border border-emerald-300 shadow-sm mb-16 transition-all duration-300">
-            <div className="flex items-center gap-3 mb-2">
-              <span className="text-xs font-mono font-bold px-2.5 py-1 rounded bg-emerald-50 text-emerald-700 border border-emerald-200">
-                Step {flowNodes[selectedNode - 1].step} Component
-              </span>
-              <h3 className="text-lg font-bold text-slate-900">{flowNodes[selectedNode - 1].title}</h3>
+        {selectedNode && (() => {
+          const node = flowNodes[selectedNode - 1];
+          const Icon = node.icon;
+          return (
+            <div className={`p-6 rounded-3xl border-2 shadow-md mb-16 transition-all duration-300 ${node.detailBoxClass}`}>
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
+                <div className="flex items-center gap-3">
+                  <div className={`p-2.5 rounded-xl ${node.iconActive}`}>
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-mono font-bold text-slate-500 mr-2">Step {node.step}</span>
+                    <h3 className={`text-lg font-extrabold inline-block ${node.detailTitleClass}`}>{node.title}</h3>
+                  </div>
+                </div>
+                <span className={`text-xs font-bold px-3 py-1 rounded-full border ${node.badgeClass}`}>
+                  {node.badge}
+                </span>
+              </div>
+              <p className="text-sm text-slate-700 leading-relaxed max-w-4xl pt-2 border-t border-slate-300/50 mt-2">
+                {node.desc}
+              </p>
             </div>
-            <p className="text-sm text-slate-600 leading-relaxed max-w-4xl">
-              {flowNodes[selectedNode - 1].desc}
-            </p>
-          </div>
-        )}
+          );
+        })()}
 
         {/* Core Solution Triad & Physical Box Showcase */}
         <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            
-            <div className="lg:col-span-5 space-y-4">
-              <div className="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-2">Core Solution Capabilities</div>
-              
-              <div
-                onClick={() => setActiveTab('monitor')}
-                className={`p-4 rounded-2xl cursor-pointer transition-all border ${
-                  activeTab === 'monitor' ? 'bg-emerald-50/70 border-emerald-500' : 'bg-slate-50 border-slate-200'
-                }`}
-              >
-                <div className="font-bold text-slate-900 text-sm mb-1">1. Real-Time Environmental Sensing</div>
-                <div className="text-xs text-slate-600">Continuous sampling of temp, humidity, NH₃ ammonia, and LPG fuel gas.</div>
-              </div>
 
-              <div
-                onClick={() => setActiveTab('detect')}
-                className={`p-4 rounded-2xl cursor-pointer transition-all border ${
-                  activeTab === 'detect' ? 'bg-blue-50/70 border-blue-500' : 'bg-slate-50 border-slate-200'
-                }`}
-              >
-                <div className="font-bold text-slate-900 text-sm mb-1">2. Intelligent Edge Detection</div>
-                <div className="text-xs text-slate-600">ESP32 microcontrollers process drift limits locally at sub-second speeds.</div>
-              </div>
+          {/* Section Subsection Title */}
+          <div className="mb-8">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Our Smart Solution
+            </h3>
+          </div>
 
-              <div
-                onClick={() => setActiveTab('respond')}
-                className={`p-4 rounded-2xl cursor-pointer transition-all border ${
-                  activeTab === 'respond' ? 'bg-amber-50/70 border-amber-500' : 'bg-slate-50 border-slate-200'
-                }`}
-              >
-                <div className="font-bold text-slate-900 text-sm mb-1">3. Smart Automated Physical Response</div>
-                <div className="text-xs text-slate-600">Local acoustic alarm + 180° servo motor turning physical gas regulator valve off.</div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
 
-            <div className="lg:col-span-7">
-              <div className="rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm aspect-[16/10]">
+            {/* Left Side: Hardware Prototype Image (Top and Bottom Aligned) */}
+            <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col">
+              <div className="rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm h-full w-full flex items-center justify-center group min-h-[360px]">
                 <img
                   src="/assets/our solution/Screenshot 2026-09-07 105418.png"
                   alt="CluckNet Hardware Module Prototype"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
+            </div>
+
+            {/* Right Side: Core Solution Capabilities Interactive Cards (Top and Bottom Aligned) */}
+            <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col justify-between gap-4">
+
+              {/* Card 1: Emerald Theme */}
+              <div
+                onClick={() => setActiveTab('monitor')}
+                onMouseEnter={() => setActiveTab('monitor')}
+                className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'monitor'
+                    ? 'bg-emerald-50 border-emerald-500 shadow-md scale-[1.02] ring-2 ring-emerald-500/20'
+                    : 'bg-slate-50 border-slate-200 hover:bg-emerald-50/60 hover:border-emerald-400 hover:-translate-y-1 hover:shadow-md'
+                  }`}
+              >
+                <div className="font-bold text-slate-900 text-sm sm:text-base mb-1.5">
+                  1. Real-Time Environmental Sensing
+                </div>
+                <div className="text-xs text-slate-600 leading-relaxed">
+                  Continuous sampling of temp, humidity, NH₃ ammonia, and LPG fuel gas.
+                </div>
+              </div>
+
+              {/* Card 2: Blue Theme */}
+              <div
+                onClick={() => setActiveTab('detect')}
+                onMouseEnter={() => setActiveTab('detect')}
+                className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'detect'
+                    ? 'bg-blue-50 border-blue-500 shadow-md scale-[1.02] ring-2 ring-blue-500/20'
+                    : 'bg-slate-50 border-slate-200 hover:bg-blue-50/60 hover:border-blue-400 hover:-translate-y-1 hover:shadow-md'
+                  }`}
+              >
+                <div className="font-bold text-slate-900 text-sm sm:text-base mb-1.5">
+                  2. Intelligent Edge Detection
+                </div>
+                <div className="text-xs text-slate-600 leading-relaxed">
+                  ESP32 microcontrollers process drift limits locally at sub-second speeds.
+                </div>
+              </div>
+
+              {/* Card 3: Amber Theme */}
+              <div
+                onClick={() => setActiveTab('respond')}
+                onMouseEnter={() => setActiveTab('respond')}
+                className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'respond'
+                    ? 'bg-amber-50 border-amber-500 shadow-md scale-[1.02] ring-2 ring-amber-500/20'
+                    : 'bg-slate-50 border-slate-200 hover:bg-amber-50/60 hover:border-amber-400 hover:-translate-y-1 hover:shadow-md'
+                  }`}
+              >
+                <div className="font-bold text-slate-900 text-sm sm:text-base mb-1.5">
+                  3. Smart Automated Physical Response
+                </div>
+                <div className="text-xs text-slate-600 leading-relaxed">
+                  Local acoustic alarm & 180° servo motor turning physical gas regulator valve off.
+                </div>
+              </div>
+
             </div>
 
           </div>
