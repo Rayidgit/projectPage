@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Cpu, Wifi, Cloud, Database, Smartphone, ShieldCheck, Zap, Radio } from 'lucide-react';
+import { Cpu, Wifi, Cloud, Database, Smartphone, ShieldCheck, Radio } from 'lucide-react';
 
 export const SolutionArchitecture: React.FC = () => {
   const [selectedNode, setSelectedNode] = useState<number | null>(1);
@@ -142,10 +142,6 @@ export const SolutionArchitecture: React.FC = () => {
 
         {/* Left-Aligned Section Header */}
         <div className="text-left max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
-            <Zap className="w-3.5 h-3.5" />
-            End-to-End System Architecture
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
             Solution Architecture
           </h2>
@@ -211,19 +207,10 @@ export const SolutionArchitecture: React.FC = () => {
         {/* Detail Inspection Box */}
         {selectedNode && (() => {
           const node = flowNodes[selectedNode - 1];
-          const Icon = node.icon;
           return (
             <div className={`p-6 rounded-3xl border-2 shadow-md mb-16 transition-all duration-300 ${node.detailBoxClass}`}>
               <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
-                <div className="flex items-center gap-3">
-                  <div className={`p-2.5 rounded-xl ${node.iconActive}`}>
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-mono font-bold text-slate-500 mr-2">Step {node.step}</span>
-                    <h3 className={`text-lg font-extrabold inline-block ${node.detailTitleClass}`}>{node.title}</h3>
-                  </div>
-                </div>
+                <h3 className={`text-lg font-extrabold ${node.detailTitleClass}`}>{node.title}</h3>
                 <span className={`text-xs font-bold px-3 py-1 rounded-full border ${node.badgeClass}`}>
                   {node.badge}
                 </span>
@@ -249,11 +236,11 @@ export const SolutionArchitecture: React.FC = () => {
 
             {/* Left Side: Hardware Prototype Image (Top and Bottom Aligned) */}
             <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col">
-              <div className="rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-sm h-full w-full flex items-center justify-center group min-h-[360px]">
+              <div className="rounded-2xl overflow-hidden bg-slate-50 border border-slate-200 shadow-sm h-full w-full flex items-center justify-center group min-h-[360px] p-2">
                 <img
                   src="/assets/our solution/Screenshot 2026-09-07 105418.png"
                   alt="CluckNet Hardware Module Prototype"
-                  className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-500 rounded-xl"
                 />
               </div>
             </div>
@@ -265,15 +252,15 @@ export const SolutionArchitecture: React.FC = () => {
               <div
                 onClick={() => setActiveTab('monitor')}
                 onMouseEnter={() => setActiveTab('monitor')}
-                className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'monitor'
+                className={`p-5 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'monitor'
                     ? 'bg-emerald-50 border-emerald-500 shadow-md scale-[1.02] ring-2 ring-emerald-500/20'
                     : 'bg-slate-50 border-slate-200 hover:bg-emerald-50/60 hover:border-emerald-400 hover:-translate-y-1 hover:shadow-md'
                   }`}
               >
-                <div className="font-bold text-slate-900 text-sm sm:text-base mb-1.5">
+                <div className="font-extrabold text-slate-900 text-base sm:text-lg mb-2">
                   1. Real-Time Environmental Sensing
                 </div>
-                <div className="text-xs text-slate-600 leading-relaxed">
+                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
                   Continuous sampling of temp, humidity, NH₃ ammonia, and LPG fuel gas.
                 </div>
               </div>
@@ -282,15 +269,15 @@ export const SolutionArchitecture: React.FC = () => {
               <div
                 onClick={() => setActiveTab('detect')}
                 onMouseEnter={() => setActiveTab('detect')}
-                className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'detect'
+                className={`p-5 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'detect'
                     ? 'bg-blue-50 border-blue-500 shadow-md scale-[1.02] ring-2 ring-blue-500/20'
                     : 'bg-slate-50 border-slate-200 hover:bg-blue-50/60 hover:border-blue-400 hover:-translate-y-1 hover:shadow-md'
                   }`}
               >
-                <div className="font-bold text-slate-900 text-sm sm:text-base mb-1.5">
+                <div className="font-extrabold text-slate-900 text-base sm:text-lg mb-2">
                   2. Intelligent Edge Detection
                 </div>
-                <div className="text-xs text-slate-600 leading-relaxed">
+                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
                   ESP32 microcontrollers process drift limits locally at sub-second speeds.
                 </div>
               </div>
@@ -299,15 +286,15 @@ export const SolutionArchitecture: React.FC = () => {
               <div
                 onClick={() => setActiveTab('respond')}
                 onMouseEnter={() => setActiveTab('respond')}
-                className={`p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'respond'
+                className={`p-5 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'respond'
                     ? 'bg-amber-50 border-amber-500 shadow-md scale-[1.02] ring-2 ring-amber-500/20'
                     : 'bg-slate-50 border-slate-200 hover:bg-amber-50/60 hover:border-amber-400 hover:-translate-y-1 hover:shadow-md'
                   }`}
               >
-                <div className="font-bold text-slate-900 text-sm sm:text-base mb-1.5">
+                <div className="font-extrabold text-slate-900 text-base sm:text-lg mb-2">
                   3. Smart Automated Physical Response
                 </div>
-                <div className="text-xs text-slate-600 leading-relaxed">
+                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
                   Local acoustic alarm & 180° servo motor turning physical gas regulator valve off.
                 </div>
               </div>

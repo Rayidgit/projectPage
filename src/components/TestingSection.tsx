@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Camera, CheckCircle2, Smartphone, Video } from 'lucide-react';
+import { CheckCircle2, Smartphone, Video } from 'lucide-react';
 
 export const TestingSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'hardware' | 'unit' | 'video'>('hardware');
@@ -10,10 +10,6 @@ export const TestingSection: React.FC = () => {
         
         {/* Left-Aligned Section Header */}
         <div className="text-left max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider mb-4">
-            <Camera className="w-3.5 h-3.5" />
-            Verification & Quality Assurance
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
             System Testing & Results
           </h2>

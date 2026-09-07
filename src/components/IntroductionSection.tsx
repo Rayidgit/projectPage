@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, ThermometerSnowflake, EyeOff, TrendingDown, Target, ShieldCheck, Activity } from 'lucide-react';
+import { ThermometerSnowflake, EyeOff, TrendingDown, Target, ShieldCheck, Activity } from 'lucide-react';
 
 export const IntroductionSection: React.FC = () => {
   const broodingTimeline = [
@@ -17,10 +17,6 @@ export const IntroductionSection: React.FC = () => {
         
         {/* Left-Aligned Section Header */}
         <div className="text-left max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-50 border border-red-200 text-red-700 text-xs font-bold uppercase tracking-wider mb-4">
-            <AlertTriangle className="w-3.5 h-3.5" />
-            Project Background & Motivation
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
             Introduction to <span className="text-emerald-600">CluckNet</span>
           </h2>
