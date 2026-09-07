@@ -152,16 +152,15 @@ export const SolutionArchitecture: React.FC = () => {
 
         {/* Architecture Diagram Image Box */}
         <div className="bg-white p-4 sm:p-6 rounded-3xl border border-slate-200 mb-12 shadow-sm overflow-hidden">
-          <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4 flex items-center justify-between">
+          <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">
             <span>Verified System Architecture Diagram</span>
-            <span className="text-emerald-700 font-mono font-bold">AWS IoT Core + Spring Boot</span>
           </div>
 
-          <div className="rounded-2xl overflow-hidden bg-slate-50 border border-slate-200">
+          <div className="rounded-2xl overflow-hidden bg-slate-50 border border-slate-200 p-2 sm:p-4">
             <img
               src="/assets/system architecture.png"
               alt="CluckNet System Architecture Diagram"
-              className="w-full h-auto object-contain max-h-[460px] mx-auto hover:scale-[1.01] transition-transform duration-500"
+              className="w-full h-auto object-contain max-h-[520px] mx-auto hover:scale-[1.01] transition-transform duration-500 rounded-xl"
             />
           </div>
         </div>
@@ -183,8 +182,7 @@ export const SolutionArchitecture: React.FC = () => {
                     : `bg-white border-slate-200 shadow-sm ${node.hoverClass}`
                 }`}
               >
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-xs font-mono font-bold text-slate-400">{node.step}</span>
+                <div className="flex items-center justify-end mb-3">
                   <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">
                     {node.badge}
                   </span>
@@ -258,7 +256,7 @@ export const SolutionArchitecture: React.FC = () => {
                   }`}
               >
                 <div className="font-extrabold text-slate-900 text-base sm:text-lg mb-2">
-                  1. Real-Time Environmental Sensing
+                  Real-Time Environmental Sensing
                 </div>
                 <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
                   Continuous sampling of temp, humidity, NH₃ ammonia, and LPG fuel gas.
@@ -275,7 +273,7 @@ export const SolutionArchitecture: React.FC = () => {
                   }`}
               >
                 <div className="font-extrabold text-slate-900 text-base sm:text-lg mb-2">
-                  2. Intelligent Edge Detection
+                  Intelligent Edge Detection
                 </div>
                 <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
                   ESP32 microcontrollers process drift limits locally at sub-second speeds.
@@ -292,7 +290,7 @@ export const SolutionArchitecture: React.FC = () => {
                   }`}
               >
                 <div className="font-extrabold text-slate-900 text-base sm:text-lg mb-2">
-                  3. Smart Automated Physical Response
+                  Smart Automated Physical Response
                 </div>
                 <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
                   Local acoustic alarm & 180° servo motor turning physical gas regulator valve off.

@@ -195,11 +195,11 @@ export const TechnologySection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10 mb-6">
+              <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10 mb-6 p-2">
                 <img
                   src="/assets/security.png"
                   alt="CluckNet System Security Diagram"
-                  className="w-full h-auto object-contain max-h-[280px] mx-auto hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto object-contain max-h-[380px] mx-auto hover:scale-[1.01] transition-transform duration-500 rounded-xl"
                 />
               </div>
 

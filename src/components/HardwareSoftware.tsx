@@ -1,8 +1,24 @@
 import React, { useState } from 'react';
-import { Cpu, Code2, Lock, Zap } from 'lucide-react';
+import { Cpu, Code2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export const HardwareSoftware: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'hardware' | 'software'>('hardware');
+  const [powerSlideIndex, setPowerSlideIndex] = useState<number>(0);
+
+  const powerSlides = [
+    {
+      title: 'Hardware Power System Wiring Schematic 1',
+      src: '/assets/device power system/Screenshot 2026-09-07 110119.png'
+    },
+    {
+      title: 'Hardware Power System Wiring Schematic 2',
+      src: '/assets/device power system/Screenshot 2026-09-07 110143.png'
+    },
+    {
+      title: 'Hardware Power System Wiring Schematic 3',
+      src: '/assets/device power system/Screenshot 2026-09-07 110108.png'
+    }
+  ];
 
   const hardwareItems = [
     { name: 'ESP32 Microcontroller', role: 'Edge Core & Gateway', specs: 'Dual-core 240MHz · 5V VIN · 150–200mA' },
@@ -86,19 +102,53 @@ export const HardwareSoftware: React.FC = () => {
               ))}
             </div>
 
-            {/* Power Wiring Schematic */}
-            <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm">
-              <div className="flex items-center gap-2 text-xs font-bold text-amber-700 uppercase tracking-wider mb-1">
-                <Zap className="w-4 h-4" />
-                Uninterruptible Failover Architecture
+            {/* Power Wiring Schematic & Power Consumption Table Interactive Slider Card */}
+            <div className="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+              <div className="mb-4">
+                <h4 className="text-lg font-extrabold text-slate-900">Hardware Power System & Power Consumption Table</h4>
               </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-4">Hardware Power System Schematic</h4>
-              <div className="rounded-2xl overflow-hidden bg-white border border-slate-200">
+
+              {/* Sliding Image Container */}
+              <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 p-2 sm:p-4 relative group">
                 <img
-                  src="/assets/device power system/Screenshot 2026-09-07 110108.png"
-                  alt="CluckNet Power Wiring Schematic"
-                  className="w-full h-auto object-contain max-h-[360px] mx-auto hover:scale-105 transition-transform duration-500"
+                  src={powerSlides[powerSlideIndex].src}
+                  alt={powerSlides[powerSlideIndex].title}
+                  className="w-full h-auto object-contain max-h-[520px] mx-auto hover:scale-[1.01] transition-transform duration-500 rounded-xl"
                 />
+
+                {/* Left Arrow Button */}
+                <button
+                  onClick={() => setPowerSlideIndex((prev) => (prev === 0 ? powerSlides.length - 1 : prev - 1))}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-slate-900/60 text-white hover:bg-emerald-600 transition-all shadow-md active:scale-95 backdrop-blur-sm"
+                  title="Previous Diagram"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+
+                {/* Right Arrow Button */}
+                <button
+                  onClick={() => setPowerSlideIndex((prev) => (prev === powerSlides.length - 1 ? 0 : prev + 1))}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-slate-900/60 text-white hover:bg-emerald-600 transition-all shadow-md active:scale-95 backdrop-blur-sm"
+                  title="Next Diagram"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+
+                {/* Sliding Dot Navigation Indicators */}
+                <div className="flex justify-center items-center gap-2 mt-4 pt-3 border-t border-slate-100">
+                  {powerSlides.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setPowerSlideIndex(idx)}
+                      className={`h-2.5 rounded-full transition-all duration-300 ${
+                        powerSlideIndex === idx
+                          ? 'w-8 bg-emerald-600'
+                          : 'w-2.5 bg-slate-300 hover:bg-slate-400'
+                      }`}
+                      title={`Switch to Diagram ${idx + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -126,16 +176,12 @@ export const HardwareSoftware: React.FC = () => {
 
             {/* Security Architecture Diagram */}
             <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200 shadow-sm">
-              <div className="flex items-center gap-2 text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1">
-                <Lock className="w-4 h-4" />
-                Multi-Layer Telemetry Security
-              </div>
               <h4 className="text-lg font-bold text-slate-900 mb-4">Software Security & Auth Architecture</h4>
-              <div className="rounded-2xl overflow-hidden bg-white border border-slate-200">
+              <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 p-2 sm:p-4">
                 <img
                   src="/assets/security.png"
                   alt="CluckNet Security Architecture Diagram"
-                  className="w-full h-auto object-contain max-h-[360px] mx-auto hover:scale-105 transition-transform duration-500"
+                  className="w-full h-auto object-contain max-h-[480px] mx-auto hover:scale-[1.01] transition-transform duration-500 rounded-xl"
                 />
               </div>
             </div>
