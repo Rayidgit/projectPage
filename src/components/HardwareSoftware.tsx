@@ -113,7 +113,7 @@ export const HardwareSoftware: React.FC = () => {
             onClick={() => setActiveTab('software')}
             className={`flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold transition-all shadow-sm ${
               activeTab === 'software'
-                ? 'bg-emerald-600 text-white shadow-emerald-600/20'
+                ? 'bg-blue-600 text-white shadow-blue-600/20'
                 : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
             }`}
           >

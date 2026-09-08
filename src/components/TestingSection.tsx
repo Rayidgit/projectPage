@@ -107,7 +107,7 @@ export const TestingSection: React.FC = () => {
             onClick={() => setActiveTab('software')}
             className={`px-5 py-2.5 rounded-full text-xs font-bold transition-all ${
               activeTab === 'software'
-                ? 'bg-emerald-600 text-white shadow-md'
+                ? 'bg-blue-600 text-white shadow-md'
                 : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50'
             }`}
           >
@@ -227,7 +227,7 @@ export const TestingSection: React.FC = () => {
                       setCurrentSoftwareSlide(idx);
                     }}
                     className={`h-2 rounded-full transition-all ${
-                      currentSoftwareSlide === idx ? 'w-6 bg-emerald-400' : 'w-2 bg-white/40 hover:bg-white/70'
+                      currentSoftwareSlide === idx ? 'w-6 bg-blue-400' : 'w-2 bg-white/40 hover:bg-white/70'
                     }`}
                     aria-label={`Go to slide ${idx + 1}`}
                   />
