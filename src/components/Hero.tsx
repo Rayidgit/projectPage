@@ -3,7 +3,7 @@ import { ArrowRight, ChevronRight } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-slate-50">
+    <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-slate-100/80 border-b border-slate-300">
       {/* Subtle Background Gradients */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-400/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-1/3 right-10 w-[450px] h-[450px] bg-blue-400/10 rounded-full blur-[130px] pointer-events-none" />
@@ -61,23 +61,23 @@ export const Hero: React.FC = () => {
 
           {/* Quick Spec Highlights Bar */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-5 pt-10 border-t border-slate-200/80 w-full max-w-5xl">
-            <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-slate-400 group cursor-pointer overflow-hidden">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 font-sans mb-1 group-hover:scale-105 transition-transform duration-300 whitespace-nowrap">99.9%</div>
+            <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-slate-400 group cursor-pointer overflow-hidden">
+              <div className="text-lg sm:text-xl lg:text-2xl font-extrabold text-slate-900 font-sans mb-1 group-hover:scale-105 transition-transform duration-300 whitespace-nowrap">99.9%</div>
               <div className="text-[11px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider whitespace-nowrap">Uptime Guarantee</div>
             </div>
 
-            <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-emerald-500 hover:shadow-emerald-500/10 group cursor-pointer overflow-hidden">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-emerald-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300 whitespace-nowrap">&lt; 100ms</div>
+            <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-emerald-500 hover:shadow-emerald-500/10 group cursor-pointer overflow-hidden">
+              <div className="text-lg sm:text-xl lg:text-2xl font-extrabold text-emerald-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300 whitespace-nowrap">&lt; 100ms</div>
               <div className="text-[11px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider whitespace-nowrap">ESP-NOW Latency</div>
             </div>
 
-            <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-500 hover:shadow-blue-500/10 group cursor-pointer overflow-hidden">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-blue-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300 whitespace-nowrap">Dual-Layer</div>
+            <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-500 hover:shadow-blue-500/10 group cursor-pointer overflow-hidden">
+              <div className="text-lg sm:text-xl lg:text-2xl font-extrabold text-blue-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300 whitespace-nowrap">Dual-Layer</div>
               <div className="text-[11px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider whitespace-nowrap">Battery Failover</div>
             </div>
 
-            <div className="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-amber-500 hover:shadow-amber-500/10 group cursor-pointer overflow-hidden">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-amber-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300 whitespace-nowrap">Auto-Cut</div>
+            <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-amber-500 hover:shadow-amber-500/10 group cursor-pointer overflow-hidden">
+              <div className="text-lg sm:text-xl lg:text-2xl font-extrabold text-amber-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300 whitespace-nowrap">Auto-Blocking</div>
               <div className="text-[11px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider whitespace-nowrap">180° Servo Valve</div>
             </div>
           </div>

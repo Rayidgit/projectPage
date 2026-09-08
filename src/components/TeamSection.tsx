@@ -26,7 +26,7 @@ export const TeamSection: React.FC = () => {
   ];
 
   return (
-    <section id="team" className="py-24 relative overflow-hidden bg-slate-50">
+    <section id="team" className="py-24 relative overflow-hidden bg-slate-100/80 border-t border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Left-Aligned Section Header */}
@@ -35,7 +35,7 @@ export const TeamSection: React.FC = () => {
             Meet the Team
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            Engineered by Computer Engineering undergraduates for the Third Year Engineering Project (Milestone 3).
+            Engineered by Computer Engineering undergraduates for the Third Year Engineering Project.
           </p>
         </div>
 

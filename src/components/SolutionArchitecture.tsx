@@ -137,7 +137,7 @@ export const SolutionArchitecture: React.FC = () => {
   ];
 
   return (
-    <section id="solution-architecture" className="py-24 relative bg-slate-50 border-t border-slate-200">
+    <section id="solution-architecture" className="py-24 relative bg-slate-100/80 border-t border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Left-Aligned Section Header */}

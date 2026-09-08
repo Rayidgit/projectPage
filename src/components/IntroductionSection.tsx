@@ -12,7 +12,7 @@ export const IntroductionSection: React.FC = () => {
   ];
 
   return (
-    <section id="introduction" className="py-24 relative bg-white border-y border-slate-200">
+    <section id="introduction" className="py-24 relative bg-white border-y border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Left-Aligned Section Header */}
