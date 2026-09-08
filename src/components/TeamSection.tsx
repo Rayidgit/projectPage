@@ -27,9 +27,6 @@ export const TeamSection: React.FC = () => {
 
   return (
     <section id="team" className="py-24 relative overflow-hidden bg-slate-50">
-      {/* Background Accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Left-Aligned Section Header */}
@@ -47,11 +44,11 @@ export const TeamSection: React.FC = () => {
           {teamMembers.map((member, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:border-emerald-500/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
+              className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:bg-[#dbece4] hover:border-emerald-400/60 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
             >
               <div>
                 {/* Member Portrait Image Container */}
-                <div className="relative rounded-2xl overflow-hidden mb-5 bg-slate-100 border border-slate-200 aspect-square group-hover:border-emerald-500/30 transition-colors">
+                <div className="relative rounded-2xl overflow-hidden mb-5 bg-slate-100 border border-slate-200 aspect-square group-hover:border-slate-400 transition-colors">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -59,18 +56,18 @@ export const TeamSection: React.FC = () => {
                   />
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-900 mb-4 group-hover:text-emerald-700 transition-colors">
+                <h3 className="text-lg font-bold text-slate-900 mb-4 group-hover:text-slate-800 transition-colors">
                   {member.name}
                 </h3>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-[11px] text-slate-500 font-medium">Department of Computer Engineering</span>
+              <div className="pt-4 border-t border-slate-200/80 flex items-center justify-between">
+                <span className="text-[11px] text-slate-600 font-medium">Department of Computer Engineering</span>
                 <a
                   href={member.cnLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-slate-100 hover:bg-emerald-600 hover:text-white text-slate-700 border border-slate-200 transition-all"
+                  className="p-2 rounded-lg bg-white hover:bg-slate-700 hover:text-white text-slate-700 border border-slate-300 transition-all shadow-sm"
                   aria-label={`View profile for ${member.name}`}
                   title="View CN Profile"
                 >

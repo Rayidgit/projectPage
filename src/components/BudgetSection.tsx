@@ -46,7 +46,7 @@ export const BudgetSection: React.FC = () => {
                 {budgetItems.map((item, idx) => (
                   <tr
                     key={idx}
-                    className={`transition-colors duration-150 hover:bg-emerald-50/70 ${
+                    className={`transition-colors duration-150 hover:bg-[#dbece4] ${
                       idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'
                     }`}
                   >
