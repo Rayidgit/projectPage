@@ -270,10 +270,10 @@ export const TestingSection: React.FC = () => {
 
                 <div 
                   className="rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 cursor-pointer group relative flex items-center justify-center min-h-[300px] max-h-[520px]"
-                  onClick={() => setSelectedImageModal({ src: '/assets/testing/Hardware testing3.png', title: 'ESP32 Mainboard & Power Circuit Assembly' })}
+                  onClick={() => setSelectedImageModal({ src: '/assets/testing/Hardware testing.png', title: 'ESP32 Mainboard & Power Circuit Assembly' })}
                 >
                   <img
-                    src="/assets/testing/Hardware testing3.png"
+                    src="/assets/testing/Hardware testing.png"
                     alt="ESP32 PCB Mainboard and Power Circuit Setup"
                     className="w-full h-auto object-contain max-h-[520px] mx-auto transition-transform duration-300 group-hover:scale-[1.01]"
                   />

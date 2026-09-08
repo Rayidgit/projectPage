@@ -34,7 +34,7 @@ export const BudgetSection: React.FC = () => {
         <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-slate-50 text-slate-700 uppercase font-mono font-bold border-b border-slate-200">
+              <thead className="bg-slate-100 text-slate-800 uppercase font-sans font-bold border-b border-slate-200">
                 <tr>
                   <th className="px-6 py-4">Components</th>
                   <th className="px-6 py-4 text-center">Quantity</th>
@@ -42,20 +42,25 @@ export const BudgetSection: React.FC = () => {
                   <th className="px-6 py-4 text-right">Total Amount (LKR)</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 text-slate-700">
+              <tbody className="divide-y divide-slate-200/60 text-slate-800">
                 {budgetItems.map((item, idx) => (
-                  <tr key={idx} className="hover:bg-slate-50 transition-colors">
+                  <tr
+                    key={idx}
+                    className={`transition-colors duration-150 hover:bg-emerald-50/70 ${
+                      idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'
+                    }`}
+                  >
                     <td className="px-6 py-3.5 font-semibold text-slate-900">{item.name}</td>
-                    <td className="px-6 py-3.5 text-center font-mono text-slate-600">{item.qty}</td>
-                    <td className="px-6 py-3.5 text-right font-mono text-slate-500">{item.unitPrice}</td>
-                    <td className="px-6 py-3.5 text-right font-mono text-emerald-700 font-bold">{item.total}</td>
+                    <td className="px-6 py-3.5 text-center font-['Arial',sans-serif] font-semibold text-slate-800">{item.qty}</td>
+                    <td className="px-6 py-3.5 text-right font-['Arial',sans-serif] font-semibold text-slate-700">{item.unitPrice}</td>
+                    <td className="px-6 py-3.5 text-right font-['Arial',sans-serif] font-bold text-emerald-700">{item.total}</td>
                   </tr>
                 ))}
               </tbody>
-              <tfoot className="bg-slate-50 font-bold border-t border-slate-200">
+              <tfoot className="bg-slate-100 font-bold border-t border-slate-200">
                 <tr>
                   <td colSpan={3} className="px-6 py-4 text-slate-900 uppercase tracking-wider text-right text-xs">Total Amount Per Zone</td>
-                  <td className="px-6 py-4 text-right font-mono text-emerald-700 text-base sm:text-lg">17,520.00 LKR</td>
+                  <td className="px-6 py-4 text-right font-['Arial',sans-serif] font-bold text-emerald-700 text-base sm:text-lg">17,520.00 LKR</td>
                 </tr>
               </tfoot>
             </table>

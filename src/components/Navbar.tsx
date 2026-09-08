@@ -17,6 +17,10 @@ export const Navbar: React.FC = () => {
   ];
 
   useEffect(() => {
+    // Ensure dark class is removed when reverted
+    document.documentElement.classList.remove('dark');
+    localStorage.removeItem('theme');
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 

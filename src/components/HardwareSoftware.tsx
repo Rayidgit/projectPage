@@ -32,14 +32,54 @@ export const HardwareSoftware: React.FC = () => {
   ];
 
   const softwareItems = [
-    { name: 'Spring Boot (Java)', role: 'Core Backend Framework', specs: 'AWS EC2 Hosted · REST APIs & MQTT Threads' },
-    { name: 'AWS IoT Core', role: 'Cloud MQTT Broker', specs: 'MQTT over TLS · Topic clucknet/aws/data' },
-    { name: 'MySQL Database', role: 'Relational User & Device Data', specs: 'AWS RDS Managed · Structured Storage' },
-    { name: 'InfluxDB', role: 'Time-Series Telemetry DB', specs: 'High-speed Telemetry & Historical Analytics' },
-    { name: 'Flutter Framework', role: 'Cross-Platform Mobile App', specs: 'iOS & Android · Real-Time Dashboard UI' },
-    { name: 'Firebase Cloud Messaging', role: 'Instant Push Alerts', specs: 'Mobile Hazard Alert Notifications' },
-    { name: 'ESP-NOW Protocol', role: 'Peer-to-Peer Radio Mesh', specs: 'Encrypted MAC Layer · Sub-100ms Latency' },
-    { name: 'JWT & BCrypt Security', role: 'REST Authentication & Encryption', specs: 'HTTPS · Session Tokens & Password Hashing' },
+    {
+      name: 'Spring Boot (Java)',
+      role: 'Core Backend Framework',
+      specs: 'AWS EC2 Hosted · REST APIs & MQTT Threads',
+      symbol: '/assets/symbols/spring-boot.png'
+    },
+    {
+      name: 'AWS IoT Core',
+      role: 'Cloud MQTT Broker',
+      specs: 'MQTT over TLS · Topic clucknet/aws/data',
+      symbol: '/assets/symbols/iot_title.png'
+    },
+    {
+      name: 'MySQL Database',
+      role: 'Relational User & Device Data',
+      specs: 'AWS RDS Managed · Structured Storage',
+      symbol: '/assets/symbols/mysql.png'
+    },
+    {
+      name: 'InfluxDB',
+      role: 'Time-Series Telemetry DB',
+      specs: 'High-speed Telemetry & Historical Analytics',
+      symbol: '/assets/symbols/influx.png'
+    },
+    {
+      name: 'Flutter Framework',
+      role: 'Cross-Platform Mobile App',
+      specs: 'iOS & Android · Real-Time Dashboard UI',
+      symbol: '/assets/symbols/flutter.jpg'
+    },
+    {
+      name: 'Firebase Cloud Messaging',
+      role: 'Instant Push Alerts',
+      specs: 'Mobile Hazard Alert Notifications',
+      symbol: '/assets/symbols/firebase-cloud-messaging.jpg'
+    },
+    {
+      name: 'ESP-NOW Protocol',
+      role: 'Peer-to-Peer Radio Mesh',
+      specs: 'Encrypted MAC Layer · Sub-100ms Latency',
+      symbol: '/assets/symbols/esp-now.jpg'
+    },
+    {
+      name: 'JWT & BCrypt Security',
+      role: 'REST Authentication & Encryption',
+      specs: 'HTTPS · Session Tokens & Password Hashing',
+      symbol: '/assets/symbols/jwt.webp'
+    },
   ];
 
   return (
@@ -95,7 +135,7 @@ export const HardwareSoftware: React.FC = () => {
                     <span className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider block mb-1">{item.role}</span>
                     <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">{item.name}</h3>
                   </div>
-                  <div className="pt-3 border-t border-slate-200 text-[11px] font-mono text-slate-600">
+                  <div className="pt-3 border-t border-slate-200 text-[11px] font-['Arial',sans-serif] text-slate-600">
                     {item.specs}
                   </div>
                 </div>
@@ -164,10 +204,23 @@ export const HardwareSoftware: React.FC = () => {
                   className="bg-slate-50 hover:bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-blue-500/50 cursor-pointer group"
                 >
                   <div>
-                    <span className="text-[10px] font-bold text-blue-700 uppercase tracking-wider block mb-1">{item.role}</span>
-                    <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition-colors">{item.name}</h3>
+                    <div className="flex items-start justify-between gap-3 mb-2">
+                      <div>
+                        <span className="text-[10px] font-bold text-blue-700 uppercase tracking-wider block mb-1">{item.role}</span>
+                        <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-700 transition-colors">{item.name}</h3>
+                      </div>
+                      {item.symbol && (
+                        <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 shadow-sm p-1.5 flex items-center justify-center shrink-0 group-hover:border-blue-400 transition-colors">
+                          <img
+                            src={item.symbol}
+                            alt={item.name}
+                            className="w-full h-full object-contain rounded"
+                          />
+                        </div>
+                      )}
+                    </div>
                   </div>
-                  <div className="pt-3 border-t border-slate-200 text-[11px] font-mono text-slate-600">
+                  <div className="pt-3 border-t border-slate-200 text-[11px] font-['Arial',sans-serif] text-slate-600">
                     {item.specs}
                   </div>
                 </div>
