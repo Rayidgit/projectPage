@@ -158,7 +158,7 @@ export const SolutionArchitecture: React.FC = () => {
 
           <div className="rounded-2xl overflow-hidden bg-slate-50 border border-slate-200 p-2 sm:p-4">
             <img
-              src="/assets/system architecture.png"
+              src={`${import.meta.env.BASE_URL}assets/system architecture.png`}
               alt="CluckNet System Architecture Diagram"
               className="w-full h-auto object-contain max-h-[520px] mx-auto hover:scale-[1.01] transition-transform duration-500 rounded-xl"
             />
@@ -236,7 +236,7 @@ export const SolutionArchitecture: React.FC = () => {
             <div className="lg:col-span-7 order-2 lg:order-1 flex flex-col">
               <div className="rounded-2xl overflow-hidden bg-slate-50 border border-slate-200 shadow-sm h-full w-full flex items-center justify-center group min-h-[360px] p-2">
                 <img
-                  src="/assets/our solution/Screenshot 2026-09-07 105418.png"
+                  src={`${import.meta.env.BASE_URL}assets/our solution/Screenshot 2026-09-07 105418.png`}
                   alt="CluckNet Hardware Module Prototype"
                   className="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-500 rounded-xl"
                 />

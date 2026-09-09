@@ -92,7 +92,7 @@ export const Showcase: React.FC = () => {
 
             <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10 mb-6">
               <img
-                src="/assets/testing/Screenshot 2026-09-07 110231.png"
+                src={`${import.meta.env.BASE_URL}assets/testing/Hardware testing.png`}
                 alt="Hardware PCB Testing and Multimeter Measurements"
                 className="w-full h-auto object-contain max-h-[500px] mx-auto"
               />
@@ -115,7 +115,7 @@ export const Showcase: React.FC = () => {
 
             <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10">
               <img
-                src="/assets/backend-frontend tech/Screenshot 2026-09-07 110002.png"
+                src={`${import.meta.env.BASE_URL}assets/backend-frontend tech/Screenshot 2026-09-07 110002.png`}
                 alt="Flutter Mobile Application Dashboard Screenshots"
                 className="w-full h-auto object-contain max-h-[500px] mx-auto"
               />
@@ -138,7 +138,7 @@ export const Showcase: React.FC = () => {
 
             <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10">
               <img
-                src="/assets/testing/Screenshot 2026-09-07 110253.png"
+                src={`${import.meta.env.BASE_URL}assets/testing/software testing.png`}
                 alt="Software Unit Testing Execution Screenshots"
                 className="w-full h-auto object-contain max-h-[500px] mx-auto"
               />

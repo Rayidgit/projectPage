@@ -18,7 +18,7 @@ const softwareSlides: SoftwareSlide[] = [
     badge: '11 / 11 Passed',
     badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     description: '100% pass rate for DeviceAssignmentService, MqttSyncPublisher, and TelemetryProcessingService.',
-    imageSrc: '/assets/testing/unit testing.jpg',
+    imageSrc: `${import.meta.env.BASE_URL}assets/testing/unit testing.jpg`,
     alt: 'Software Unit Testing Execution Screenshots'
   },
   {
@@ -27,7 +27,7 @@ const softwareSlides: SoftwareSlide[] = [
     badge: 'Simulation Active',
     badgeColor: 'bg-blue-50 text-blue-700 border-blue-200',
     description: 'Automated mock test suite validating edge-to-cloud payload publishing, MQTT sync, and failure recovery.',
-    imageSrc: '/assets/testing/Mock testing.png',
+    imageSrc: `${import.meta.env.BASE_URL}assets/testing/Mock testing.png`,
     alt: 'Mock Testing Execution Screenshots'
   },
   {
@@ -36,7 +36,7 @@ const softwareSlides: SoftwareSlide[] = [
     badge: 'Endpoints Verified',
     badgeColor: 'bg-purple-50 text-purple-700 border-purple-200',
     description: 'Integration tests confirming HTTP 200 responses, request serialization, and authentication header validation.',
-    imageSrc: '/assets/testing/API testing.png',
+    imageSrc: `${import.meta.env.BASE_URL}assets/testing/API testing.png`,
     alt: 'API Testing Execution Screenshots'
   }
 ];
@@ -60,19 +60,19 @@ export const TestingSection: React.FC = () => {
     {
       title: 'Raw Battery Bus (10.78V DC)',
       subtitle: 'Multimeter measurement across raw battery bus',
-      imageSrc: '/assets/testing/Hardware testing1.png',
+      imageSrc: `${import.meta.env.BASE_URL}assets/testing/Hardware testing1.png`,
       alt: 'Raw Battery Bus Multimeter Reading 10.78V DC'
     },
     {
       title: 'PCB Board & Circuit Setup',
       subtitle: 'ESP32 microcontroller, relays & buck converter assembly',
-      imageSrc: '/assets/testing/Hardware testing.png',
+      imageSrc: `${import.meta.env.BASE_URL}assets/testing/Hardware testing.png`,
       alt: 'ESP32 Hardware PCB Board Assembly Setup'
     },
     {
       title: 'Logic Supply Bus (4.99V DC)',
       subtitle: 'Multimeter measurement across 5V buck logic bus',
-      imageSrc: '/assets/testing/Hardware testing2.png',
+      imageSrc: `${import.meta.env.BASE_URL}assets/testing/Hardware testing2.png`,
       alt: 'Logic Supply Bus Multimeter Reading 4.99V DC'
     }
   ];

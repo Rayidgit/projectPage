@@ -117,7 +117,7 @@ export const HowItWorks: React.FC = () => {
 
           <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10">
             <img
-              src="/assets/system architecture.png"
+              src={`${import.meta.env.BASE_URL}assets/system architecture.png`}
               alt="CluckNet Official System Architecture Diagram"
               className="w-full h-auto object-contain max-h-[480px] mx-auto hover:scale-[1.01] transition-transform duration-500"
             />

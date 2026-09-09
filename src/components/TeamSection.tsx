@@ -6,22 +6,22 @@ export const TeamSection: React.FC = () => {
     {
       name: 'M.F.M. FAZLY',
       cnLink: 'https://thecn.com/EF509',
-      image: '/assets/team/fazly.png'
+      image: `${import.meta.env.BASE_URL}assets/team/fazly.png`
     },
     {
       name: 'A.H.M. RAYID',
       cnLink: 'https://thecn.com/ER757',
-      image: '/assets/team/rayid.png'
+      image: `${import.meta.env.BASE_URL}assets/team/rayid.png`
     },
     {
       name: 'R.M. RINOS',
       cnLink: 'https://thecn.com/ER760',
-      image: '/assets/team/rinos.png'
+      image: `${import.meta.env.BASE_URL}assets/team/rinos.png`
     },
     {
       name: 'A.M.M. SAABITH',
       cnLink: 'https://thecn.com/SM3230',
-      image: '/assets/team/saabith.png'
+      image: `${import.meta.env.BASE_URL}assets/team/saabith.png`
     }
   ];
 

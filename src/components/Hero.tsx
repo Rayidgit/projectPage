@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
       {/* Transparent Clucks Background Image on Right Side (Visibility Increases Moving Right) */}
       <div className="absolute inset-y-0 right-0 w-full lg:w-2/3 pointer-events-none overflow-hidden z-0">
         <img
-          src="/assets/clucks.jpg"
+          src={`${import.meta.env.BASE_URL}assets/clucks.jpg`}
           alt="CluckNet Poultry Environment"
           className="w-full h-full object-cover object-right opacity-45 mix-blend-multiply"
           style={{

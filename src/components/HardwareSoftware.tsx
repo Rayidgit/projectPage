@@ -8,15 +8,15 @@ export const HardwareSoftware: React.FC = () => {
   const powerSlides = [
     {
       title: 'Hardware Power System Wiring Schematic 1',
-      src: '/assets/device power system/Screenshot 2026-09-07 110119.png'
+      src: `${import.meta.env.BASE_URL}assets/device power system/Screenshot 2026-09-07 110119.png`
     },
     {
       title: 'Hardware Power System Wiring Schematic 2',
-      src: '/assets/device power system/Screenshot 2026-09-07 110143.png'
+      src: `${import.meta.env.BASE_URL}assets/device power system/Screenshot 2026-09-07 110143.png`
     },
     {
       title: 'Hardware Power System Wiring Schematic 3',
-      src: '/assets/device power system/Screenshot 2026-09-07 110108.png'
+      src: `${import.meta.env.BASE_URL}assets/device power system/Screenshot 2026-09-07 110108.png`
     }
   ];
 
@@ -36,49 +36,49 @@ export const HardwareSoftware: React.FC = () => {
       name: 'Spring Boot (Java)',
       role: 'Core Backend Framework',
       specs: 'AWS EC2 Hosted · REST APIs & MQTT Threads',
-      symbol: '/assets/symbols/spring-boot.png'
+      symbol: `${import.meta.env.BASE_URL}assets/symbols/spring-boot.png`
     },
     {
       name: 'AWS IoT Core',
       role: 'Cloud MQTT Broker',
       specs: 'MQTT over TLS · Topic clucknet/aws/data',
-      symbol: '/assets/symbols/iot_title.png'
+      symbol: `${import.meta.env.BASE_URL}assets/symbols/iot_title.png`
     },
     {
       name: 'MySQL Database',
       role: 'Relational User & Device Data',
       specs: 'AWS RDS Managed · Structured Storage',
-      symbol: '/assets/symbols/mysql.png'
+      symbol: `${import.meta.env.BASE_URL}assets/symbols/mysql.png`
     },
     {
       name: 'InfluxDB',
       role: 'Time-Series Telemetry DB',
       specs: 'High-speed Telemetry & Historical Analytics',
-      symbol: '/assets/symbols/influx.png'
+      symbol: `${import.meta.env.BASE_URL}assets/symbols/influx.png`
     },
     {
       name: 'Flutter Framework',
       role: 'Cross-Platform Mobile App',
       specs: 'iOS & Android · Real-Time Dashboard UI',
-      symbol: '/assets/symbols/flutter.jpg'
+      symbol: `${import.meta.env.BASE_URL}assets/symbols/flutter.jpg`
     },
     {
       name: 'Firebase Cloud Messaging',
       role: 'Instant Push Alerts',
       specs: 'Mobile Hazard Alert Notifications',
-      symbol: '/assets/symbols/firebase-cloud-messaging.jpg'
+      symbol: `${import.meta.env.BASE_URL}assets/symbols/firebase-cloud-messaging.jpg`
     },
     {
       name: 'ESP-NOW Protocol',
       role: 'Peer-to-Peer Radio Mesh',
       specs: 'Encrypted MAC Layer · Sub-100ms Latency',
-      symbol: '/assets/symbols/esp-now.jpg'
+      symbol: `${import.meta.env.BASE_URL}assets/symbols/esp-now.jpg`
     },
     {
       name: 'JWT & BCrypt Security',
       role: 'REST Authentication & Encryption',
       specs: 'HTTPS · Session Tokens & Password Hashing',
-      symbol: '/assets/symbols/jwt.webp'
+      symbol: `${import.meta.env.BASE_URL}assets/symbols/jwt.webp`
     },
   ];
 
@@ -232,7 +232,7 @@ export const HardwareSoftware: React.FC = () => {
               <h4 className="text-lg font-bold text-slate-900 mb-4">Software Security & Auth Architecture</h4>
               <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 p-2 sm:p-4">
                 <img
-                  src="/assets/security.png"
+                  src={`${import.meta.env.BASE_URL}assets/security.png`}
                   alt="CluckNet Security Architecture Diagram"
                   className="w-full h-auto object-contain max-h-[480px] mx-auto hover:scale-[1.01] transition-transform duration-500 rounded-xl"
                 />
