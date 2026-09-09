@@ -69,12 +69,12 @@ export const TeamSection: React.FC = () => {
                   />
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-900 mb-4 group-hover:text-slate-800 transition-colors">
+                <h3 className="text-lg font-bold text-slate-900 mb-4 group-hover:text-slate-800 transition-colors text-center">
                   {member.name}
                 </h3>
               </div>
 
-              <div className="pt-4 border-t border-slate-200/80 flex items-center justify-end gap-2.5">
+              <div className="pt-4 border-t border-slate-200/80 flex items-center justify-center gap-2.5">
                 {/* CN Profile Link */}
                 <a
                   href={member.cnLink}
