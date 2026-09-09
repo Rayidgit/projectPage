@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logoImg from '../assets/webpage-logo.png';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,7 +56,7 @@ export const Navbar: React.FC = () => {
           {/* CluckNet Branding: Logo + Cluck (BLACK) + Net (GREEN) */}
           <a href="#home" className="flex items-center gap-3 group">
             <img
-              src={`${import.meta.env.BASE_URL}assets/webpage-logo.png`}
+              src={logoImg}
               alt="CluckNet Logo"
               className="h-10 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-sm"
             />
