@@ -1,5 +1,4 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
 import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const TeamSection: React.FC = () => {
@@ -67,17 +66,21 @@ export const TeamSection: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="pt-4 border-t border-slate-200/80 flex items-center justify-between">
-                <span className="text-[11px] text-slate-600 font-medium">Department of Computer Engineering</span>
+              <div className="pt-4 border-t border-slate-200/80 flex items-center justify-end">
                 <a
                   href={member.cnLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-white hover:bg-slate-700 hover:text-white text-slate-700 border border-slate-300 transition-all shadow-sm"
-                  aria-label={`View profile for ${member.name}`}
-                  title="View CN Profile"
+                  className="w-9 h-9 rounded-xl bg-white border border-slate-200 shadow-sm p-1.5 flex items-center justify-center shrink-0 hover:border-emerald-500 hover:shadow-md hover:scale-105 transition-all group/cn"
+                  aria-label={`View CN profile for ${member.name}`}
+                  title={`View ${member.name}'s CN Profile`}
                 >
-                  <ExternalLink className="w-4 h-4" />
+                  <img
+                    src={getAssetUrl('assets/cn.jpg')}
+                    onError={(e) => handleImageError(e, 'assets/cn.jpg')}
+                    alt="Course Networking Logo"
+                    className="w-full h-full object-contain rounded group-hover/cn:opacity-90 transition-opacity"
+                  />
                 </a>
               </div>
             </div>
