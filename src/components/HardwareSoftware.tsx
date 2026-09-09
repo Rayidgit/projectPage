@@ -25,14 +25,62 @@ export const HardwareSoftware: React.FC = () => {
   ];
 
   const hardwareItems = [
-    { name: 'ESP32 Microcontroller', role: 'Edge Core & Gateway', specs: 'Dual-core 240MHz · 5V VIN · 150–200mA' },
-    { name: 'SHT30 Sensor Module', role: 'Temperature & Humidity', specs: 'I2C Interface · 3.3V · 2mA' },
-    { name: 'MQ135 Gas Sensor', role: 'Ammonia (NH₃) Gas Detection', specs: 'Analog Output · 5V · 150–200mA' },
-    { name: 'MQ6 Gas Sensor', role: 'LPG Fuel Leak Detection', specs: 'Analog Output · 5V · 150–200mA' },
-    { name: 'Servo Motor (MG995)', role: '180° Gas Regulator Shutoff', specs: '5V · High Torque 10–500mA' },
-    { name: '5V Buzzer Module', role: 'Acoustic Hazard Alert', specs: '5V · 10–20mA High Decibel' },
-    { name: 'LM2596 Buck Converter', role: 'Voltage Step Down (12V to 5V)', specs: '12V DC Input · 5V DC Output' },
-    { name: '3S LiFePO4 Battery Pack', role: 'Uninterruptible Backup Power', specs: '3x 18650 Cells · 11.1V Nominal · 3S BMS' },
+    {
+      name: 'ESP32 Microcontroller',
+      role: 'Edge Core & Gateway',
+      specs: 'Dual-core 240MHz · 5V VIN · 150–200mA',
+      symbol: getAssetUrl('assets/Hardware components/esp32.png'),
+      rawSymbol: 'assets/Hardware components/esp32.png'
+    },
+    {
+      name: 'SHT30 Sensor Module',
+      role: 'Temperature & Humidity',
+      specs: 'I2C Interface · 3.3V · 2mA',
+      symbol: getAssetUrl('assets/Hardware components/sht30.png'),
+      rawSymbol: 'assets/Hardware components/sht30.png'
+    },
+    {
+      name: 'MQ135 Gas Sensor',
+      role: 'Ammonia (NH₃) Gas Detection',
+      specs: 'Analog Output · 5V · 150–200mA',
+      symbol: getAssetUrl('assets/Hardware components/mq135.png'),
+      rawSymbol: 'assets/Hardware components/mq135.png'
+    },
+    {
+      name: 'MQ6 Gas Sensor',
+      role: 'LPG Fuel Leak Detection',
+      specs: 'Analog Output · 5V · 150–200mA',
+      symbol: getAssetUrl('assets/Hardware components/mq6.png'),
+      rawSymbol: 'assets/Hardware components/mq6.png'
+    },
+    {
+      name: 'Servo Motor (MG995)',
+      role: '180° Gas Regulator Shutoff',
+      specs: '5V · High Torque 10–500mA',
+      symbol: getAssetUrl('assets/Hardware components/servo-motor.png'),
+      rawSymbol: 'assets/Hardware components/servo-motor.png'
+    },
+    {
+      name: '5V Buzzer Module',
+      role: 'Acoustic Hazard Alert',
+      specs: '5V · 10–20mA High Decibel',
+      symbol: getAssetUrl('assets/Hardware components/buzzer.png'),
+      rawSymbol: 'assets/Hardware components/buzzer.png'
+    },
+    {
+      name: 'LM2596 Buck Converter',
+      role: 'Voltage Step Down (12V to 5V)',
+      specs: '12V DC Input · 5V DC Output',
+      symbol: getAssetUrl('assets/Hardware components/bug-convertor.png'),
+      rawSymbol: 'assets/Hardware components/bug-convertor.png'
+    },
+    {
+      name: '3S LiFePO4 Battery Pack',
+      role: 'Uninterruptible Backup Power',
+      specs: '3x 18650 Cells · 11.1V Nominal · 3S BMS',
+      symbol: getAssetUrl('assets/Hardware components/battery.png'),
+      rawSymbol: 'assets/Hardware components/battery.png'
+    },
   ];
 
   const softwareItems = [
@@ -144,8 +192,22 @@ export const HardwareSoftware: React.FC = () => {
                   className="bg-slate-50 hover:bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-emerald-500/50 cursor-pointer group"
                 >
                   <div>
-                    <span className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider block mb-1">{item.role}</span>
-                    <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition-colors">{item.name}</h3>
+                    <div className="flex items-start justify-between gap-3 mb-2">
+                      <div>
+                        <span className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider block mb-1">{item.role}</span>
+                        <h3 className="text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">{item.name}</h3>
+                      </div>
+                      {item.symbol && (
+                        <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 shadow-sm p-1.5 flex items-center justify-center shrink-0 group-hover:border-emerald-400 transition-colors">
+                          <img
+                            src={item.symbol}
+                            onError={(e) => handleImageError(e, item.rawSymbol)}
+                            alt={item.name}
+                            className="w-full h-full object-contain rounded"
+                          />
+                        </div>
+                      )}
+                    </div>
                   </div>
                   <div className="pt-3 border-t border-slate-200 text-[11px] font-['Arial',sans-serif] text-slate-600">
                     {item.specs}
