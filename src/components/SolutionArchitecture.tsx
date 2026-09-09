@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Cpu, Wifi, Cloud, Database, Smartphone, ShieldCheck, Radio } from 'lucide-react';
+import { Cpu, Wifi, Cloud, Database, Smartphone, ShieldCheck, Radio, Zap } from 'lucide-react';
 import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const SolutionArchitecture: React.FC = () => {
@@ -258,10 +258,17 @@ export const SolutionArchitecture: React.FC = () => {
                     : 'bg-slate-50 border-slate-200 hover:bg-emerald-50/60 hover:border-emerald-400 hover:-translate-y-1 hover:shadow-md'
                   }`}
               >
-                <div className="font-extrabold text-slate-900 text-base sm:text-lg mb-2">
-                  Real-Time Environmental Sensing
+                <div className="flex items-center gap-3 mb-2">
+                  <div className={`p-2 rounded-xl transition-colors shrink-0 ${
+                    activeTab === 'monitor' ? 'bg-emerald-600 text-white shadow-sm' : 'bg-emerald-100 text-emerald-700'
+                  }`}>
+                    <Radio className="w-5 h-5" />
+                  </div>
+                  <div className="font-extrabold text-slate-900 text-base sm:text-lg">
+                    Real-Time Environmental Sensing
+                  </div>
                 </div>
-                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
+                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed pl-1">
                   Continuous sampling of temp, humidity, NH₃ ammonia, and LPG fuel gas.
                 </div>
               </div>
@@ -275,10 +282,17 @@ export const SolutionArchitecture: React.FC = () => {
                     : 'bg-slate-50 border-slate-200 hover:bg-blue-50/60 hover:border-blue-400 hover:-translate-y-1 hover:shadow-md'
                   }`}
               >
-                <div className="font-extrabold text-slate-900 text-base sm:text-lg mb-2">
-                  Intelligent Edge Detection
+                <div className="flex items-center gap-3 mb-2">
+                  <div className={`p-2 rounded-xl transition-colors shrink-0 ${
+                    activeTab === 'detect' ? 'bg-blue-600 text-white shadow-sm' : 'bg-blue-100 text-blue-700'
+                  }`}>
+                    <Cpu className="w-5 h-5" />
+                  </div>
+                  <div className="font-extrabold text-slate-900 text-base sm:text-lg">
+                    Intelligent Edge Detection
+                  </div>
                 </div>
-                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
+                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed pl-1">
                   ESP32 microcontrollers process drift limits locally at sub-second speeds.
                 </div>
               </div>
@@ -292,10 +306,17 @@ export const SolutionArchitecture: React.FC = () => {
                     : 'bg-slate-50 border-slate-200 hover:bg-amber-50/60 hover:border-amber-400 hover:-translate-y-1 hover:shadow-md'
                   }`}
               >
-                <div className="font-extrabold text-slate-900 text-base sm:text-lg mb-2">
-                  Smart Automated Physical Response
+                <div className="flex items-center gap-3 mb-2">
+                  <div className={`p-2 rounded-xl transition-colors shrink-0 ${
+                    activeTab === 'respond' ? 'bg-amber-600 text-white shadow-sm' : 'bg-amber-100 text-amber-700'
+                  }`}>
+                    <Zap className="w-5 h-5" />
+                  </div>
+                  <div className="font-extrabold text-slate-900 text-base sm:text-lg">
+                    Smart Automated Physical Response
+                  </div>
                 </div>
-                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
+                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed pl-1">
                   Local acoustic alarm & 180° servo motor turning physical gas regulator valve off.
                 </div>
               </div>
