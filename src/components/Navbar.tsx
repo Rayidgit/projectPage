@@ -53,13 +53,13 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between">
           
           {/* CluckNet Branding: Logo + Cluck (BLACK) + Net (GREEN) */}
-          <a href="#home" className="flex items-center gap-2.5 group">
+          <a href="#home" className="flex items-center gap-3 group">
             <img
               src={`${import.meta.env.BASE_URL}assets/webpage-logo.png`}
               alt="CluckNet Logo"
-              className="h-9 w-auto object-contain"
+              className="h-10 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-sm"
             />
-            <span className="text-2xl font-extrabold tracking-tight font-sans">
+            <span className="text-2xl sm:text-3xl font-extrabold tracking-tight font-sans">
               <span className="text-slate-900">Cluck</span>
               <span className="text-emerald-600">Net</span>
             </span>
