@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Camera, CheckCircle2, Smartphone } from 'lucide-react';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const Showcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'hardware' | 'mobile' | 'testing' | 'budget'>('hardware');
@@ -92,7 +93,8 @@ export const Showcase: React.FC = () => {
 
             <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10 mb-6">
               <img
-                src={`${import.meta.env.BASE_URL}assets/testing/Hardware testing.png`}
+                src={getAssetUrl('assets/testing/Hardware testing.png')}
+                onError={(e) => handleImageError(e, 'assets/testing/Hardware testing.png')}
                 alt="Hardware PCB Testing and Multimeter Measurements"
                 className="w-full h-auto object-contain max-h-[500px] mx-auto"
               />
@@ -115,7 +117,8 @@ export const Showcase: React.FC = () => {
 
             <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10">
               <img
-                src={`${import.meta.env.BASE_URL}assets/backend-frontend tech/Screenshot 2026-09-07 110002.png`}
+                src={getAssetUrl('assets/backend-frontend tech/Screenshot 2026-09-07 110002.png')}
+                onError={(e) => handleImageError(e, 'assets/backend-frontend tech/Screenshot 2026-09-07 110002.png')}
                 alt="Flutter Mobile Application Dashboard Screenshots"
                 className="w-full h-auto object-contain max-h-[500px] mx-auto"
               />
@@ -138,7 +141,8 @@ export const Showcase: React.FC = () => {
 
             <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10">
               <img
-                src={`${import.meta.env.BASE_URL}assets/testing/software testing.png`}
+                src={getAssetUrl('assets/testing/software testing.png')}
+                onError={(e) => handleImageError(e, 'assets/testing/software testing.png')}
                 alt="Software Unit Testing Execution Screenshots"
                 className="w-full h-auto object-contain max-h-[500px] mx-auto"
               />

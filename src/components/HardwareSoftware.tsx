@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Cpu, Code2, ChevronLeft, ChevronRight } from 'lucide-react';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const HardwareSoftware: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'hardware' | 'software'>('hardware');
@@ -8,15 +9,18 @@ export const HardwareSoftware: React.FC = () => {
   const powerSlides = [
     {
       title: 'Hardware Power System Wiring Schematic 1',
-      src: `${import.meta.env.BASE_URL}assets/device power system/Screenshot 2026-09-07 110119.png`
+      rawPath: 'assets/device power system/Screenshot 2026-09-07 110119.png',
+      src: getAssetUrl('assets/device power system/Screenshot 2026-09-07 110119.png')
     },
     {
       title: 'Hardware Power System Wiring Schematic 2',
-      src: `${import.meta.env.BASE_URL}assets/device power system/Screenshot 2026-09-07 110143.png`
+      rawPath: 'assets/device power system/Screenshot 2026-09-07 110143.png',
+      src: getAssetUrl('assets/device power system/Screenshot 2026-09-07 110143.png')
     },
     {
       title: 'Hardware Power System Wiring Schematic 3',
-      src: `${import.meta.env.BASE_URL}assets/device power system/Screenshot 2026-09-07 110108.png`
+      rawPath: 'assets/device power system/Screenshot 2026-09-07 110108.png',
+      src: getAssetUrl('assets/device power system/Screenshot 2026-09-07 110108.png')
     }
   ];
 
@@ -36,49 +40,57 @@ export const HardwareSoftware: React.FC = () => {
       name: 'Spring Boot (Java)',
       role: 'Core Backend Framework',
       specs: 'AWS EC2 Hosted · REST APIs & MQTT Threads',
-      symbol: `${import.meta.env.BASE_URL}assets/symbols/spring-boot.png`
+      symbol: getAssetUrl('assets/symbols/spring-boot.png'),
+      rawSymbol: 'assets/symbols/spring-boot.png'
     },
     {
       name: 'AWS IoT Core',
       role: 'Cloud MQTT Broker',
       specs: 'MQTT over TLS · Topic clucknet/aws/data',
-      symbol: `${import.meta.env.BASE_URL}assets/symbols/iot_title.png`
+      symbol: getAssetUrl('assets/symbols/iot_title.png'),
+      rawSymbol: 'assets/symbols/iot_title.png'
     },
     {
       name: 'MySQL Database',
       role: 'Relational User & Device Data',
       specs: 'AWS RDS Managed · Structured Storage',
-      symbol: `${import.meta.env.BASE_URL}assets/symbols/mysql.png`
+      symbol: getAssetUrl('assets/symbols/mysql.png'),
+      rawSymbol: 'assets/symbols/mysql.png'
     },
     {
       name: 'InfluxDB',
       role: 'Time-Series Telemetry DB',
       specs: 'High-speed Telemetry & Historical Analytics',
-      symbol: `${import.meta.env.BASE_URL}assets/symbols/influx.png`
+      symbol: getAssetUrl('assets/symbols/influx.png'),
+      rawSymbol: 'assets/symbols/influx.png'
     },
     {
       name: 'Flutter Framework',
       role: 'Cross-Platform Mobile App',
       specs: 'iOS & Android · Real-Time Dashboard UI',
-      symbol: `${import.meta.env.BASE_URL}assets/symbols/flutter.jpg`
+      symbol: getAssetUrl('assets/symbols/flutter.jpg'),
+      rawSymbol: 'assets/symbols/flutter.jpg'
     },
     {
       name: 'Firebase Cloud Messaging',
       role: 'Instant Push Alerts',
       specs: 'Mobile Hazard Alert Notifications',
-      symbol: `${import.meta.env.BASE_URL}assets/symbols/firebase-cloud-messaging.jpg`
+      symbol: getAssetUrl('assets/symbols/firebase-cloud-messaging.jpg'),
+      rawSymbol: 'assets/symbols/firebase-cloud-messaging.jpg'
     },
     {
       name: 'ESP-NOW Protocol',
       role: 'Peer-to-Peer Radio Mesh',
       specs: 'Encrypted MAC Layer · Sub-100ms Latency',
-      symbol: `${import.meta.env.BASE_URL}assets/symbols/esp-now.jpg`
+      symbol: getAssetUrl('assets/symbols/esp-now.jpg'),
+      rawSymbol: 'assets/symbols/esp-now.jpg'
     },
     {
       name: 'JWT & BCrypt Security',
       role: 'REST Authentication & Encryption',
       specs: 'HTTPS · Session Tokens & Password Hashing',
-      symbol: `${import.meta.env.BASE_URL}assets/symbols/jwt.webp`
+      symbol: getAssetUrl('assets/symbols/jwt.webp'),
+      rawSymbol: 'assets/symbols/jwt.webp'
     },
   ];
 
@@ -152,6 +164,7 @@ export const HardwareSoftware: React.FC = () => {
               <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 p-2 sm:p-4 relative group">
                 <img
                   src={powerSlides[powerSlideIndex].src}
+                  onError={(e) => handleImageError(e, powerSlides[powerSlideIndex].rawPath)}
                   alt={powerSlides[powerSlideIndex].title}
                   className="w-full h-auto object-contain max-h-[520px] mx-auto hover:scale-[1.01] transition-transform duration-500 rounded-xl"
                 />
@@ -213,6 +226,7 @@ export const HardwareSoftware: React.FC = () => {
                         <div className="w-10 h-10 rounded-xl bg-white border border-slate-200 shadow-sm p-1.5 flex items-center justify-center shrink-0 group-hover:border-blue-400 transition-colors">
                           <img
                             src={item.symbol}
+                            onError={(e) => handleImageError(e, item.rawSymbol)}
                             alt={item.name}
                             className="w-full h-full object-contain rounded"
                           />
@@ -232,7 +246,8 @@ export const HardwareSoftware: React.FC = () => {
               <h4 className="text-lg font-bold text-slate-900 mb-4">Software Security & Auth Architecture</h4>
               <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 p-2 sm:p-4">
                 <img
-                  src={`${import.meta.env.BASE_URL}assets/security.png`}
+                  src={getAssetUrl('assets/security.png')}
+                  onError={(e) => handleImageError(e, 'assets/security.png')}
                   alt="CluckNet Security Architecture Diagram"
                   className="w-full h-auto object-contain max-h-[480px] mx-auto hover:scale-[1.01] transition-transform duration-500 rounded-xl"
                 />

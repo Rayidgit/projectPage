@@ -1,5 +1,6 @@
 import React from 'react';
 import { AlertTriangle, ThermometerSnowflake, EyeOff, TrendingDown, Skull } from 'lucide-react';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const ProblemSection: React.FC = () => {
   const broodingTimeline = [
@@ -129,7 +130,8 @@ export const ProblemSection: React.FC = () => {
             <h4 className="text-lg font-bold text-white mb-4">Temperature Requirements & Brooding Risks</h4>
             <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10">
               <img
-                src={`${import.meta.env.BASE_URL}assets/intro/Screenshot 2026-09-07 105229.png`}
+                src={getAssetUrl('assets/intro/Screenshot 2026-09-07 105229.png')}
+                onError={(e) => handleImageError(e, 'assets/intro/Screenshot 2026-09-07 105229.png')}
                 alt="Brooding Temperature Curve and Risks"
                 className="w-full h-auto object-contain max-h-[300px] mx-auto hover:scale-105 transition-transform duration-500"
               />
@@ -142,7 +144,8 @@ export const ProblemSection: React.FC = () => {
             <h4 className="text-lg font-bold text-white mb-4">Behavioral Indicators vs Real Telemetry Data</h4>
             <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10">
               <img
-                src={`${import.meta.env.BASE_URL}assets/intro/Screenshot 2026-09-07 105243.png`}
+                src={getAssetUrl('assets/intro/Screenshot 2026-09-07 105243.png')}
+                onError={(e) => handleImageError(e, 'assets/intro/Screenshot 2026-09-07 105243.png')}
                 alt="Traditional Guesswork vs Data Driven Chicks Behavior"
                 className="w-full h-auto object-contain max-h-[300px] mx-auto hover:scale-105 transition-transform duration-500"
               />

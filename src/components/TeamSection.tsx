@@ -1,27 +1,32 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const TeamSection: React.FC = () => {
   const teamMembers = [
     {
       name: 'M.F.M. FAZLY',
       cnLink: 'https://thecn.com/EF509',
-      image: `${import.meta.env.BASE_URL}assets/team/fazly.png`
+      image: getAssetUrl('assets/team/fazly.png'),
+      rawImage: 'assets/team/fazly.png'
     },
     {
       name: 'A.H.M. RAYID',
       cnLink: 'https://thecn.com/ER757',
-      image: `${import.meta.env.BASE_URL}assets/team/rayid.png`
+      image: getAssetUrl('assets/team/rayid.png'),
+      rawImage: 'assets/team/rayid.png'
     },
     {
       name: 'R.M. RINOS',
       cnLink: 'https://thecn.com/ER760',
-      image: `${import.meta.env.BASE_URL}assets/team/rinos.png`
+      image: getAssetUrl('assets/team/rinos.png'),
+      rawImage: 'assets/team/rinos.png'
     },
     {
       name: 'A.M.M. SAABITH',
       cnLink: 'https://thecn.com/SM3230',
-      image: `${import.meta.env.BASE_URL}assets/team/saabith.png`
+      image: getAssetUrl('assets/team/saabith.png'),
+      rawImage: 'assets/team/saabith.png'
     }
   ];
 
@@ -51,6 +56,7 @@ export const TeamSection: React.FC = () => {
                 <div className="relative rounded-2xl overflow-hidden mb-5 bg-slate-100 border border-slate-200 aspect-square group-hover:border-slate-400 transition-colors">
                   <img
                     src={member.image}
+                    onError={(e) => handleImageError(e, member.rawImage)}
                     alt={member.name}
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />

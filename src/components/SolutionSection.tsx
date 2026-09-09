@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Cpu, ShieldCheck, Zap, Radio } from 'lucide-react';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const SolutionSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'monitor' | 'detect' | 'respond'>('monitor');
@@ -112,7 +113,8 @@ export const SolutionSection: React.FC = () => {
               {/* Product Photo */}
               <div className="relative rounded-2xl overflow-hidden aspect-[16/10] bg-slate-950 border border-white/10 mb-6">
                 <img
-                  src={`${import.meta.env.BASE_URL}assets/our solution/Screenshot 2026-09-07 105418.png`}
+                  src={getAssetUrl('assets/our solution/Screenshot 2026-09-07 105418.png')}
+                  onError={(e) => handleImageError(e, 'assets/our solution/Screenshot 2026-09-07 105418.png')}
                   alt="CluckNet Physical Device Box and Servo Motor"
                   className="w-full h-full object-cover"
                 />

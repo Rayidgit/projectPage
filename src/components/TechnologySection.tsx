@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Server, Zap, Lock, Check } from 'lucide-react';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const TechnologySection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'all' | 'hardware' | 'backend' | 'power' | 'security'>('all');
@@ -197,7 +198,8 @@ export const TechnologySection: React.FC = () => {
 
               <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10 mb-6 p-2">
                 <img
-                  src={`${import.meta.env.BASE_URL}assets/security.png`}
+                  src={getAssetUrl('assets/security.png')}
+                  onError={(e) => handleImageError(e, 'assets/security.png')}
                   alt="CluckNet System Security Diagram"
                   className="w-full h-auto object-contain max-h-[380px] mx-auto hover:scale-[1.01] transition-transform duration-500 rounded-xl"
                 />
@@ -231,7 +233,8 @@ export const TechnologySection: React.FC = () => {
 
               <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10 mb-6">
                 <img
-                  src={`${import.meta.env.BASE_URL}assets/device power system/Screenshot 2026-09-07 110108.png`}
+                  src={getAssetUrl('assets/device power system/Screenshot 2026-09-07 110108.png')}
+                  onError={(e) => handleImageError(e, 'assets/device power system/Screenshot 2026-09-07 110108.png')}
                   alt="CluckNet Power System Wiring Schematic"
                   className="w-full h-auto object-contain max-h-[280px] mx-auto hover:scale-105 transition-transform duration-500"
                 />

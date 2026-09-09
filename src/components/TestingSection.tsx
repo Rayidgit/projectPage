@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CheckCircle2, ChevronLeft, ChevronRight, Maximize2, X } from 'lucide-react';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 interface SoftwareSlide {
   id: string;
@@ -8,6 +9,7 @@ interface SoftwareSlide {
   badgeColor: string;
   description: string;
   imageSrc: string;
+  rawSrc: string;
   alt: string;
 }
 
@@ -18,7 +20,8 @@ const softwareSlides: SoftwareSlide[] = [
     badge: '11 / 11 Passed',
     badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     description: '100% pass rate for DeviceAssignmentService, MqttSyncPublisher, and TelemetryProcessingService.',
-    imageSrc: `${import.meta.env.BASE_URL}assets/testing/unit testing.jpg`,
+    imageSrc: getAssetUrl('assets/testing/unit testing.jpg'),
+    rawSrc: 'assets/testing/unit testing.jpg',
     alt: 'Software Unit Testing Execution Screenshots'
   },
   {
@@ -27,7 +30,8 @@ const softwareSlides: SoftwareSlide[] = [
     badge: 'Simulation Active',
     badgeColor: 'bg-blue-50 text-blue-700 border-blue-200',
     description: 'Automated mock test suite validating edge-to-cloud payload publishing, MQTT sync, and failure recovery.',
-    imageSrc: `${import.meta.env.BASE_URL}assets/testing/Mock testing.png`,
+    imageSrc: getAssetUrl('assets/testing/Mock testing.png'),
+    rawSrc: 'assets/testing/Mock testing.png',
     alt: 'Mock Testing Execution Screenshots'
   },
   {
@@ -36,7 +40,8 @@ const softwareSlides: SoftwareSlide[] = [
     badge: 'Endpoints Verified',
     badgeColor: 'bg-purple-50 text-purple-700 border-purple-200',
     description: 'Integration tests confirming HTTP 200 responses, request serialization, and authentication header validation.',
-    imageSrc: `${import.meta.env.BASE_URL}assets/testing/API testing.png`,
+    imageSrc: getAssetUrl('assets/testing/API testing.png'),
+    rawSrc: 'assets/testing/API testing.png',
     alt: 'API Testing Execution Screenshots'
   }
 ];
@@ -44,7 +49,7 @@ const softwareSlides: SoftwareSlide[] = [
 export const TestingSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'hardware' | 'software'>('hardware');
   const [currentSoftwareSlide, setCurrentSoftwareSlide] = useState(0);
-  const [selectedImageModal, setSelectedImageModal] = useState<{ src: string; title: string } | null>(null);
+  const [selectedImageModal, setSelectedImageModal] = useState<{ src: string; rawSrc: string; title: string } | null>(null);
 
   const nextSoftwareSlide = () => {
     setCurrentSoftwareSlide((prev) => (prev + 1) % softwareSlides.length);
@@ -60,19 +65,22 @@ export const TestingSection: React.FC = () => {
     {
       title: 'Raw Battery Bus (10.78V DC)',
       subtitle: 'Multimeter measurement across raw battery bus',
-      imageSrc: `${import.meta.env.BASE_URL}assets/testing/Hardware testing1.png`,
+      imageSrc: getAssetUrl('assets/testing/Hardware testing1.png'),
+      rawSrc: 'assets/testing/Hardware testing1.png',
       alt: 'Raw Battery Bus Multimeter Reading 10.78V DC'
     },
     {
       title: 'PCB Board & Circuit Setup',
       subtitle: 'ESP32 microcontroller, relays & buck converter assembly',
-      imageSrc: `${import.meta.env.BASE_URL}assets/testing/Hardware testing.png`,
+      imageSrc: getAssetUrl('assets/testing/Hardware testing.png'),
+      rawSrc: 'assets/testing/Hardware testing.png',
       alt: 'ESP32 Hardware PCB Board Assembly Setup'
     },
     {
       title: 'Logic Supply Bus (4.99V DC)',
       subtitle: 'Multimeter measurement across 5V buck logic bus',
-      imageSrc: `${import.meta.env.BASE_URL}assets/testing/Hardware testing2.png`,
+      imageSrc: getAssetUrl('assets/testing/Hardware testing2.png'),
+      rawSrc: 'assets/testing/Hardware testing2.png',
       alt: 'Logic Supply Bus Multimeter Reading 4.99V DC'
     }
   ];
@@ -133,11 +141,12 @@ export const TestingSection: React.FC = () => {
                 <div 
                   key={idx}
                   className="flex flex-col bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden cursor-pointer group hover:border-emerald-500/50 hover:shadow-md transition-all duration-300"
-                  onClick={() => setSelectedImageModal({ src: card.imageSrc, title: card.title })}
+                  onClick={() => setSelectedImageModal({ src: card.imageSrc, rawSrc: card.rawSrc, title: card.title })}
                 >
                   <div className="relative overflow-hidden aspect-[3/4] bg-slate-100 flex items-center justify-center">
                     <img
                       src={card.imageSrc}
+                      onError={(e) => handleImageError(e, card.rawSrc)}
                       alt={card.alt}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -178,11 +187,12 @@ export const TestingSection: React.FC = () => {
             <div className="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 group">
               <div 
                 className="cursor-pointer relative overflow-hidden flex items-center justify-center min-h-[300px] max-h-[520px]"
-                onClick={() => setSelectedImageModal({ src: activeSlide.imageSrc, title: activeSlide.title })}
+                onClick={() => setSelectedImageModal({ src: activeSlide.imageSrc, rawSrc: activeSlide.rawSrc, title: activeSlide.title })}
               >
                 <img
                   key={activeSlide.id}
                   src={activeSlide.imageSrc}
+                  onError={(e) => handleImageError(e, activeSlide.rawSrc)}
                   alt={activeSlide.alt}
                   className="w-full h-auto object-contain max-h-[520px] mx-auto transition-all duration-500 ease-in-out group-hover:scale-[1.01]"
                 />
@@ -265,6 +275,7 @@ export const TestingSection: React.FC = () => {
             <div className="overflow-auto flex-1 flex items-center justify-center p-2">
               <img
                 src={selectedImageModal.src}
+                onError={(e) => handleImageError(e, selectedImageModal.rawSrc)}
                 alt={selectedImageModal.title}
                 className="max-w-full max-h-[75vh] object-contain rounded-xl"
               />

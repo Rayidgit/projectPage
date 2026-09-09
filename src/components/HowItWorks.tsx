@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Cpu, Wifi, Cloud, Database, Smartphone, ShieldCheck, Zap, Radio } from 'lucide-react';
+import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const HowItWorks: React.FC = () => {
   const [selectedNode, setSelectedNode] = useState<number | null>(1);
@@ -117,7 +118,8 @@ export const HowItWorks: React.FC = () => {
 
           <div className="rounded-2xl overflow-hidden bg-slate-950 border border-white/10">
             <img
-              src={`${import.meta.env.BASE_URL}assets/system architecture.png`}
+              src={getAssetUrl('assets/system architecture.png')}
+              onError={(e) => handleImageError(e, 'assets/system architecture.png')}
               alt="CluckNet Official System Architecture Diagram"
               className="w-full h-auto object-contain max-h-[480px] mx-auto hover:scale-[1.01] transition-transform duration-500"
             />
