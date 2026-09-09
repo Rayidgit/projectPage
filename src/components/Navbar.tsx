@@ -58,7 +58,7 @@ export const Navbar: React.FC = () => {
             <img
               src={logoImg}
               alt="CluckNet Logo"
-              className="h-10 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-sm"
+              className="h-10 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-sm rounded-2xl"
             />
             <span className="text-2xl sm:text-3xl font-extrabold tracking-tight font-sans">
               <span className="text-slate-900">Cluck</span>

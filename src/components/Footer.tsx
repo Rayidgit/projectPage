@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
                 src={getAssetUrl('assets/webpage-logo.png')}
                 onError={(e) => handleImageError(e, 'assets/webpage-logo.png')}
                 alt="CluckNet Logo"
-                className="h-10 w-auto object-contain drop-shadow-sm"
+                className="h-10 w-auto object-contain drop-shadow-sm rounded-2xl"
               />
               <span className="text-2xl font-bold tracking-tight text-white font-sans">
                 Cluck<span className="text-emerald-400">Net</span>
