@@ -6,24 +6,32 @@ export const TeamSection: React.FC = () => {
     {
       name: 'M.F.M. FAZLY',
       cnLink: 'https://thecn.com/EF509',
+      githubLink: '#',
+      linkedinLink: '#',
       image: getAssetUrl('assets/team/fazly.png'),
       rawImage: 'assets/team/fazly.png'
     },
     {
       name: 'A.H.M. RAYID',
       cnLink: 'https://thecn.com/ER757',
+      githubLink: '#',
+      linkedinLink: '#',
       image: getAssetUrl('assets/team/rayid.png'),
       rawImage: 'assets/team/rayid.png'
     },
     {
       name: 'R.M. RINOS',
       cnLink: 'https://thecn.com/ER760',
+      githubLink: '#',
+      linkedinLink: '#',
       image: getAssetUrl('assets/team/rinos.png'),
       rawImage: 'assets/team/rinos.png'
     },
     {
       name: 'A.M.M. SAABITH',
       cnLink: 'https://thecn.com/SM3230',
+      githubLink: '#',
+      linkedinLink: '#',
       image: getAssetUrl('assets/team/saabith.png'),
       rawImage: 'assets/team/saabith.png'
     }
@@ -66,7 +74,8 @@ export const TeamSection: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="pt-4 border-t border-slate-200/80 flex items-center justify-end">
+              <div className="pt-4 border-t border-slate-200/80 flex items-center justify-end gap-2.5">
+                {/* CN Profile Link */}
                 <a
                   href={member.cnLink}
                   target="_blank"
@@ -80,6 +89,40 @@ export const TeamSection: React.FC = () => {
                     onError={(e) => handleImageError(e, 'assets/cn.jpg')}
                     alt="Course Networking Logo"
                     className="w-full h-full object-contain rounded group-hover/cn:opacity-90 transition-opacity"
+                  />
+                </a>
+
+                {/* LinkedIn Profile Link */}
+                <a
+                  href={member.linkedinLink}
+                  target={member.linkedinLink !== '#' ? '_blank' : undefined}
+                  rel={member.linkedinLink !== '#' ? 'noopener noreferrer' : undefined}
+                  className="w-9 h-9 rounded-xl bg-white border border-slate-200 shadow-sm p-1.5 flex items-center justify-center shrink-0 hover:border-blue-500 hover:shadow-md hover:scale-105 transition-all group/li"
+                  aria-label={`View LinkedIn profile for ${member.name}`}
+                  title={`View ${member.name}'s LinkedIn Profile`}
+                >
+                  <img
+                    src={getAssetUrl('assets/linkedIn.jpg')}
+                    onError={(e) => handleImageError(e, 'assets/linkedIn.jpg')}
+                    alt="LinkedIn Logo"
+                    className="w-full h-full object-contain rounded group-hover/li:opacity-90 transition-opacity"
+                  />
+                </a>
+
+                {/* GitHub Profile Link */}
+                <a
+                  href={member.githubLink}
+                  target={member.githubLink !== '#' ? '_blank' : undefined}
+                  rel={member.githubLink !== '#' ? 'noopener noreferrer' : undefined}
+                  className="w-9 h-9 rounded-xl bg-white border border-slate-200 shadow-sm p-1.5 flex items-center justify-center shrink-0 hover:border-slate-800 hover:shadow-md hover:scale-105 transition-all group/gh"
+                  aria-label={`View GitHub profile for ${member.name}`}
+                  title={`View ${member.name}'s GitHub Profile`}
+                >
+                  <img
+                    src={getAssetUrl('assets/github.png')}
+                    onError={(e) => handleImageError(e, 'assets/github.png')}
+                    alt="GitHub Logo"
+                    className="w-full h-full object-contain rounded group-hover/gh:opacity-90 transition-opacity"
                   />
                 </a>
               </div>
