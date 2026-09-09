@@ -6,7 +6,7 @@ export const TeamSection: React.FC = () => {
     {
       name: 'M.F.M. FAZLY',
       cnLink: 'https://thecn.com/EF509',
-      githubLink: '#',
+      githubLink: 'https://github.com/Mhd-Fazly',
       linkedinLink: '#',
       image: getAssetUrl('assets/team/fazly.png'),
       rawImage: 'assets/team/fazly.png'
@@ -14,7 +14,7 @@ export const TeamSection: React.FC = () => {
     {
       name: 'A.H.M. RAYID',
       cnLink: 'https://thecn.com/ER757',
-      githubLink: '#',
+      githubLink: 'https://github.com/Raygit2024',
       linkedinLink: '#',
       image: getAssetUrl('assets/team/rayid.png'),
       rawImage: 'assets/team/rayid.png'
@@ -22,7 +22,7 @@ export const TeamSection: React.FC = () => {
     {
       name: 'R.M. RINOS',
       cnLink: 'https://thecn.com/ER760',
-      githubLink: '#',
+      githubLink: 'https://github.com/ramlanrinos',
       linkedinLink: '#',
       image: getAssetUrl('assets/team/rinos.png'),
       rawImage: 'assets/team/rinos.png'
@@ -30,7 +30,7 @@ export const TeamSection: React.FC = () => {
     {
       name: 'A.M.M. SAABITH',
       cnLink: 'https://thecn.com/SM3230',
-      githubLink: '#',
+      githubLink: 'https://github.com/MohamedSaabith342',
       linkedinLink: '#',
       image: getAssetUrl('assets/team/saabith.png'),
       rawImage: 'assets/team/saabith.png'
