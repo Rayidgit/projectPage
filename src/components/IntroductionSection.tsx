@@ -1,6 +1,5 @@
 import React from 'react';
 import { ThermometerSnowflake, EyeOff, TrendingDown, Target, ShieldCheck, Activity } from 'lucide-react';
-import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const IntroductionSection: React.FC = () => {
   const broodingTimeline = [
@@ -144,35 +143,6 @@ export const IntroductionSection: React.FC = () => {
             </div>
           </div>
 
-        </div>
-
-        {/* Reference Graphics */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200">
-            <div className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-1">Environmental Brooding Reference</div>
-            <h4 className="text-base font-bold text-slate-900 mb-3">Temperature Curve & Mortality Risks</h4>
-            <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm">
-              <img
-                src={getAssetUrl('assets/intro/Screenshot 2026-09-07 105229.png')}
-                onError={(e) => handleImageError(e, 'assets/intro/Screenshot 2026-09-07 105229.png')}
-                alt="Brooding Temperature Curve Diagram"
-                className="w-full h-auto object-contain max-h-[280px] mx-auto hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
-
-          <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200">
-            <div className="text-xs font-bold text-red-700 uppercase tracking-wider mb-1">Traditional Method Limitations</div>
-            <h4 className="text-base font-bold text-slate-900 mb-3">Chicks Behavior Guesswork vs Continuous Data</h4>
-            <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm">
-              <img
-                src={getAssetUrl('assets/intro/Screenshot 2026-09-07 105243.png')}
-                onError={(e) => handleImageError(e, 'assets/intro/Screenshot 2026-09-07 105243.png')}
-                alt="Chicks Behavior Guesswork Diagram"
-                className="w-full h-auto object-contain max-h-[280px] mx-auto hover:scale-105 transition-transform duration-500"
-              />
-            </div>
-          </div>
         </div>
 
       </div>
