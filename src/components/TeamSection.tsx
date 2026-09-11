@@ -56,11 +56,11 @@ export const TeamSection: React.FC = () => {
           {teamMembers.map((member, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:bg-[#dbece4] hover:border-emerald-400/60 hover:shadow-lg transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
+              className="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-slate-300 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-2 cursor-pointer"
             >
               <div>
                 {/* Member Portrait Image Container */}
-                <div className="relative rounded-2xl overflow-hidden mb-5 bg-slate-100 border border-slate-200 aspect-square group-hover:border-slate-400 transition-colors">
+                <div className="relative rounded-2xl overflow-hidden mb-5 bg-slate-100 border border-slate-200 aspect-square group-hover:border-slate-300 transition-colors">
                   <img
                     src={member.image}
                     onError={(e) => handleImageError(e, member.rawImage)}
@@ -69,7 +69,7 @@ export const TeamSection: React.FC = () => {
                   />
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-900 mb-4 group-hover:text-slate-800 transition-colors text-center">
+                <h3 className="text-lg font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-200 text-center">
                   {member.name}
                 </h3>
               </div>
@@ -134,3 +134,5 @@ export const TeamSection: React.FC = () => {
     </section>
   );
 };
+
+
