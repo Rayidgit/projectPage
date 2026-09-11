@@ -78,8 +78,8 @@ export const Hero: React.FC = () => {
               <div className="text-[11px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider whitespace-nowrap">Battery Failover</div>
             </div>
 
-            <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-amber-500 hover:shadow-amber-500/10 group cursor-pointer overflow-hidden">
-              <div className="text-lg sm:text-xl lg:text-2xl font-extrabold text-amber-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300 whitespace-nowrap">Auto-Blocking</div>
+            <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-sm text-left transition-all duration-300 transform hover:-translate-y-2 hover:shadow-xl hover:border-red-500 hover:shadow-red-500/10 group cursor-pointer overflow-hidden">
+              <div className="text-lg sm:text-xl lg:text-2xl font-extrabold text-red-600 font-sans mb-1 group-hover:scale-105 transition-transform duration-300 whitespace-nowrap">Auto-Blocking</div>
               <div className="text-[11px] sm:text-xs text-slate-500 font-semibold uppercase tracking-wider whitespace-nowrap">180° Servo Valve</div>
             </div>
           </div>

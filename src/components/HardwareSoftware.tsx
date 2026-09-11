@@ -8,17 +8,12 @@ export const HardwareSoftware: React.FC = () => {
 
   const powerSlides = [
     {
-      title: 'Hardware Power System Wiring Schematic 1',
+      title: 'Hardware Power System Circuit Implementation 1',
       rawPath: 'assets/device power system/Screenshot 2026-09-07 110119.png',
       src: getAssetUrl('assets/device power system/Screenshot 2026-09-07 110119.png')
     },
     {
-      title: 'Hardware Power System Wiring Schematic 2',
-      rawPath: 'assets/device power system/Screenshot 2026-09-07 110143.png',
-      src: getAssetUrl('assets/device power system/Screenshot 2026-09-07 110143.png')
-    },
-    {
-      title: 'Hardware Power System Wiring Schematic 3',
+      title: 'Hardware Power System Circuit Implementation 2',
       rawPath: 'assets/device power system/Screenshot 2026-09-07 110108.png',
       src: getAssetUrl('assets/device power system/Screenshot 2026-09-07 110108.png')
     }
@@ -216,10 +211,10 @@ export const HardwareSoftware: React.FC = () => {
               ))}
             </div>
 
-            {/* Power Wiring Schematic & Power Consumption Table Interactive Slider Card */}
+            {/* Power Wiring Schematic & Circuit Implementation Interactive Slider Card */}
             <div className="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
               <div className="mb-4">
-                <h4 className="text-lg font-extrabold text-slate-900">Hardware Power System & Power Consumption Table</h4>
+                <h4 className="text-lg font-extrabold text-slate-900">Hardware Power System & Circuit Implementation</h4>
               </div>
 
               {/* Sliding Image Container */}
