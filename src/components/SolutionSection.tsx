@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Cpu, ShieldCheck, Zap, Radio } from 'lucide-react';
+import { Cpu, ShieldCheck, Zap, Radio, Bell } from 'lucide-react';
 import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const SolutionSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'monitor' | 'detect' | 'respond'>('monitor');
+  const [activeTab, setActiveTab] = useState<'monitor' | 'detect' | 'respond' | 'notify'>('monitor');
 
   return (
     <section id="solution" className="py-24 relative overflow-hidden">
@@ -22,11 +22,11 @@ export const SolutionSection: React.FC = () => {
             Meet <span className="gradient-text-emerald">CluckNet</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-300">
-            CluckNet brings real-time environmental sensing, edge intelligence, and immediate physical response together into one reliable, continuous system.
+            CluckNet brings real-time environmental sensing, edge intelligence, immediate physical response, and Flutter mobile critical alert notifications together into one reliable, continuous system.
           </p>
         </div>
 
-        {/* Interactive Feature Triad Showcase */}
+        {/* Interactive Feature Showcase */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
 
           {/* Left Feature Selector */}
@@ -104,6 +104,30 @@ export const SolutionSection: React.FC = () => {
               </div>
             </div>
 
+            {/* Feature 4: Flutter Mobile Critical Notifications */}
+            <div
+              onClick={() => setActiveTab('notify')}
+              className={`p-6 rounded-3xl cursor-pointer transition-all duration-300 border ${activeTab === 'notify'
+                  ? 'bg-slate-900 border-purple-500/50 shadow-lg shadow-purple-500/10 scale-[1.02]'
+                  : 'glass-panel border-white/10 hover:border-white/20 opacity-80'
+                }`}
+            >
+              <div className="flex items-start gap-4">
+                <div className={`p-3 rounded-2xl ${activeTab === 'notify' ? 'bg-purple-500 text-cluck-navy' : 'bg-white/5 text-purple-400'}`}>
+                  <Bell className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-lg font-bold text-white">4. Flutter Mobile Critical Alerts</h3>
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Flutter & FCM</span>
+                  </div>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Dispatches instant push notifications to the Flutter mobile app when critical threshold breaches or emergency situations occur.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           {/* Right Product Image Showcase */}
@@ -138,6 +162,13 @@ export const SolutionSection: React.FC = () => {
                   <div className="absolute top-4 left-4 bg-amber-500 text-cluck-navy px-3.5 py-1.5 rounded-full text-xs font-extrabold flex items-center gap-2 shadow-lg animate-fade-in">
                     <Zap className="w-4 h-4" />
                     Buzzer & Servo Gas Shut-off Armed
+                  </div>
+                )}
+
+                {activeTab === 'notify' && (
+                  <div className="absolute top-4 left-4 bg-purple-500 text-cluck-navy px-3.5 py-1.5 rounded-full text-xs font-extrabold flex items-center gap-2 shadow-lg animate-fade-in">
+                    <Bell className="w-4 h-4" />
+                    Flutter Mobile App Critical Alert Armed
                   </div>
                 )}
               </div>

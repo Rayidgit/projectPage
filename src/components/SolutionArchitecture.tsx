@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Cpu, Wifi, Cloud, Database, Smartphone, ShieldCheck, Radio, Zap } from 'lucide-react';
+import { Cpu, Wifi, Cloud, Database, Smartphone, ShieldCheck, Radio, Zap, Bell } from 'lucide-react';
 import { getAssetUrl, handleImageError } from '../utils/assets';
 
 export const SolutionArchitecture: React.FC = () => {
   const [selectedNode, setSelectedNode] = useState<number | null>(1);
-  const [activeTab, setActiveTab] = useState<'monitor' | 'detect' | 'respond'>('monitor');
+  const [activeTab, setActiveTab] = useState<'monitor' | 'detect' | 'respond' | 'notify'>('monitor');
 
   const flowNodes = [
     {
@@ -247,18 +247,18 @@ export const SolutionArchitecture: React.FC = () => {
             </div>
 
             {/* Right Side: Core Solution Capabilities Interactive Cards (Top and Bottom Aligned) */}
-            <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col justify-between gap-4">
+            <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col justify-between gap-3 sm:gap-3.5">
 
               {/* Card 1: Emerald Theme */}
               <div
                 onClick={() => setActiveTab('monitor')}
                 onMouseEnter={() => setActiveTab('monitor')}
-                className={`p-5 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'monitor'
-                    ? 'bg-emerald-50 border-emerald-500 shadow-md scale-[1.02] ring-2 ring-emerald-500/20'
+                className={`p-4 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'monitor'
+                    ? 'bg-emerald-50 border-emerald-500 shadow-md scale-[1.01] ring-2 ring-emerald-500/20'
                     : 'bg-slate-50 border-slate-200 hover:bg-emerald-50/60 hover:border-emerald-400 hover:-translate-y-1 hover:shadow-md'
                   }`}
               >
-                <div className="flex items-center gap-3 mb-2">
+                <div className="flex items-center gap-3 mb-1.5">
                   <div className={`p-2 rounded-xl transition-colors shrink-0 ${
                     activeTab === 'monitor' ? 'bg-emerald-600 text-white shadow-sm' : 'bg-emerald-100 text-emerald-700'
                   }`}>
@@ -268,7 +268,7 @@ export const SolutionArchitecture: React.FC = () => {
                     Real-Time Environmental Sensing
                   </div>
                 </div>
-                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed pl-1">
+                <div className="text-sm text-slate-700 font-medium leading-relaxed pl-1">
                   Continuous sampling of temp, humidity, NH₃ ammonia, and LPG fuel gas.
                 </div>
               </div>
@@ -277,12 +277,12 @@ export const SolutionArchitecture: React.FC = () => {
               <div
                 onClick={() => setActiveTab('detect')}
                 onMouseEnter={() => setActiveTab('detect')}
-                className={`p-5 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'detect'
-                    ? 'bg-blue-50 border-blue-500 shadow-md scale-[1.02] ring-2 ring-blue-500/20'
+                className={`p-4 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'detect'
+                    ? 'bg-blue-50 border-blue-500 shadow-md scale-[1.01] ring-2 ring-blue-500/20'
                     : 'bg-slate-50 border-slate-200 hover:bg-blue-50/60 hover:border-blue-400 hover:-translate-y-1 hover:shadow-md'
                   }`}
               >
-                <div className="flex items-center gap-3 mb-2">
+                <div className="flex items-center gap-3 mb-1.5">
                   <div className={`p-2 rounded-xl transition-colors shrink-0 ${
                     activeTab === 'detect' ? 'bg-blue-600 text-white shadow-sm' : 'bg-blue-100 text-blue-700'
                   }`}>
@@ -292,7 +292,7 @@ export const SolutionArchitecture: React.FC = () => {
                     Intelligent Edge Detection
                   </div>
                 </div>
-                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed pl-1">
+                <div className="text-sm text-slate-700 font-medium leading-relaxed pl-1">
                   ESP32 microcontrollers process drift limits locally at sub-second speeds.
                 </div>
               </div>
@@ -301,12 +301,12 @@ export const SolutionArchitecture: React.FC = () => {
               <div
                 onClick={() => setActiveTab('respond')}
                 onMouseEnter={() => setActiveTab('respond')}
-                className={`p-5 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'respond'
-                    ? 'bg-amber-50 border-amber-500 shadow-md scale-[1.02] ring-2 ring-amber-500/20'
+                className={`p-4 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'respond'
+                    ? 'bg-amber-50 border-amber-500 shadow-md scale-[1.01] ring-2 ring-amber-500/20'
                     : 'bg-slate-50 border-slate-200 hover:bg-amber-50/60 hover:border-amber-400 hover:-translate-y-1 hover:shadow-md'
                   }`}
               >
-                <div className="flex items-center gap-3 mb-2">
+                <div className="flex items-center gap-3 mb-1.5">
                   <div className={`p-2 rounded-xl transition-colors shrink-0 ${
                     activeTab === 'respond' ? 'bg-amber-600 text-white shadow-sm' : 'bg-amber-100 text-amber-700'
                   }`}>
@@ -316,8 +316,32 @@ export const SolutionArchitecture: React.FC = () => {
                     Smart Automated Physical Response
                   </div>
                 </div>
-                <div className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed pl-1">
+                <div className="text-sm text-slate-700 font-medium leading-relaxed pl-1">
                   Local acoustic alarm & 180° servo motor turning physical gas regulator valve off.
+                </div>
+              </div>
+
+              {/* Card 4: Purple Theme - Flutter Mobile Notifications */}
+              <div
+                onClick={() => setActiveTab('notify')}
+                onMouseEnter={() => setActiveTab('notify')}
+                className={`p-4 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 transform border flex-1 flex flex-col justify-center ${activeTab === 'notify'
+                    ? 'bg-purple-50 border-purple-500 shadow-md scale-[1.01] ring-2 ring-purple-500/20'
+                    : 'bg-slate-50 border-slate-200 hover:bg-purple-50/60 hover:border-purple-400 hover:-translate-y-1 hover:shadow-md'
+                  }`}
+              >
+                <div className="flex items-center gap-3 mb-1.5">
+                  <div className={`p-2 rounded-xl transition-colors shrink-0 ${
+                    activeTab === 'notify' ? 'bg-purple-600 text-white shadow-sm' : 'bg-purple-100 text-purple-700'
+                  }`}>
+                    <Bell className="w-5 h-5" />
+                  </div>
+                  <div className="font-extrabold text-slate-900 text-base sm:text-lg">
+                    Flutter Mobile Critical Notifications
+                  </div>
+                </div>
+                <div className="text-sm text-slate-700 font-medium leading-relaxed pl-1">
+                  Instant push notifications sent to the Flutter mobile app when a critical situation occurs.
                 </div>
               </div>
 
