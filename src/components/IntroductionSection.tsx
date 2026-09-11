@@ -58,6 +58,13 @@ export const IntroductionSection: React.FC = () => {
           </div>
         </div>
 
+        {/* Subsection Header */}
+        <div className="text-left mb-8 pt-4">
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            What We Are <span className="text-red-600">Concerned About</span>
+          </h3>
+        </div>
+
         {/* 3 Environmental Problem Pillars */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           
