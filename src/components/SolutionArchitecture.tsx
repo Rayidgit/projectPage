@@ -223,7 +223,7 @@ export const SolutionArchitecture: React.FC = () => {
         })()}
 
         {/* Core Solution Triad & Physical Box Showcase */}
-        <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+        <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm mb-12">
 
           {/* Section Subsection Title */}
           <div className="mb-8">
@@ -326,7 +326,35 @@ export const SolutionArchitecture: React.FC = () => {
           </div>
         </div>
 
+        {/* Demonstration Sub-Topic */}
+        <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm">
+          
+          <div className="mb-6">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Demonstration
+            </h3>
+          </div>
+
+          {/* Video Container Box */}
+          <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-xl group aspect-video max-w-4xl mx-auto flex items-center justify-center">
+            
+            {/* HTML5 Video Element */}
+            <video
+              className="w-full h-full object-cover"
+              controls
+              preload="metadata"
+              poster={getAssetUrl('assets/our solution/Screenshot 2026-09-07 105418.png')}
+            >
+              <source src={getAssetUrl('assets/demo-video.mp4')} type="video/mp4" />
+              Your browser does not support playing HTML5 video.
+            </video>
+
+          </div>
+
+        </div>
+
       </div>
     </section>
   );
 };
+
