@@ -47,7 +47,7 @@ export const TeamSection: React.FC = () => {
             Meet the Team
           </h2>
           <p className="text-base sm:text-lg text-slate-600">
-            Engineered by Computer Engineering undergraduates for the Third Year Engineering Project.
+            Engineered by Computer Engineering undergraduates for the Third Year Project.
           </p>
         </div>
 
