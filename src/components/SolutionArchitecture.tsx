@@ -345,7 +345,7 @@ export const SolutionArchitecture: React.FC = () => {
               preload="metadata"
               poster={getAssetUrl('assets/our solution/Screenshot 2026-09-07 105418.png')}
             >
-              <source src={getAssetUrl('assets/demo-video.mp4')} type="video/mp4" />
+              <source src={getAssetUrl('assets/demo-test01.mp4')} type="video/mp4" />
               Your browser does not support playing HTML5 video.
             </video>
 
