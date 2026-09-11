@@ -142,35 +142,6 @@ export const SolutionSection: React.FC = () => {
                   alt="CluckNet Physical Device Box and Servo Motor"
                   className="w-full h-full object-cover"
                 />
-
-                {/* Active Highlight Overlay Badges based on selected Tab */}
-                {activeTab === 'monitor' && (
-                  <div className="absolute top-4 left-4 bg-emerald-500 text-cluck-navy px-3.5 py-1.5 rounded-full text-xs font-extrabold flex items-center gap-2 shadow-lg animate-fade-in">
-                    <Radio className="w-4 h-4" />
-                    SHT30 / MQ135 / MQ6 Sampling Active
-                  </div>
-                )}
-
-                {activeTab === 'detect' && (
-                  <div className="absolute top-4 left-4 bg-blue-500 text-cluck-navy px-3.5 py-1.5 rounded-full text-xs font-extrabold flex items-center gap-2 shadow-lg animate-fade-in">
-                    <ShieldCheck className="w-4 h-4" />
-                    Dual ESP32 Edge Mesh Active
-                  </div>
-                )}
-
-                {activeTab === 'respond' && (
-                  <div className="absolute top-4 left-4 bg-amber-500 text-cluck-navy px-3.5 py-1.5 rounded-full text-xs font-extrabold flex items-center gap-2 shadow-lg animate-fade-in">
-                    <Zap className="w-4 h-4" />
-                    Buzzer & Servo Gas Shut-off Armed
-                  </div>
-                )}
-
-                {activeTab === 'notify' && (
-                  <div className="absolute top-4 left-4 bg-purple-500 text-cluck-navy px-3.5 py-1.5 rounded-full text-xs font-extrabold flex items-center gap-2 shadow-lg animate-fade-in">
-                    <Bell className="w-4 h-4" />
-                    Flutter Mobile App Critical Alert Armed
-                  </div>
-                )}
               </div>
 
               {/* Dynamic Feature Details Box */}
