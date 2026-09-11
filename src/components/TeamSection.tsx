@@ -15,7 +15,7 @@ export const TeamSection: React.FC = () => {
       name: 'A.H.M. RAYID',
       cnLink: 'https://thecn.com/ER757',
       githubLink: 'https://github.com/Raygit2024',
-      linkedinLink: '#',
+      linkedinLink: 'https://www.linkedin.com/in/rayid-hussain-32a2b726a/',
       image: getAssetUrl('assets/team/rayid.png'),
       rawImage: 'assets/team/rayid.png'
     },
