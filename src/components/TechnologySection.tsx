@@ -59,7 +59,7 @@ export const TechnologySection: React.FC = () => {
       category: 'backend',
       name: 'AWS IoT Core',
       role: 'Cloud MQTT Broker',
-      detail: 'High-speed MQTT message broker supporting encrypted TLS connections for topic clucknet/aws/data.',
+      detail: 'High-speed MQTT message broker supporting encrypted TLS connections under a topic-based publisher-subscriber model.',
       specs: 'MQTT over TLS'
     },
     {

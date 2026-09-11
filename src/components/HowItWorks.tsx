@@ -53,7 +53,7 @@ export const HowItWorks: React.FC = () => {
       subtitle: 'AWS IoT Core',
       icon: Cloud,
       color: 'purple',
-      badge: 'Topic: clucknet/aws/data',
+      badge: 'Topic-Based Pub/Sub Model',
       desc: 'High-throughput enterprise MQTT broker managing publish-subscribe queues and secure TLS handshake.'
     },
     {

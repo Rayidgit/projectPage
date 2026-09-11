@@ -94,7 +94,7 @@ export const HardwareSoftware: React.FC = () => {
     {
       name: 'AWS IoT Core',
       role: 'Cloud MQTT Broker',
-      specs: 'MQTT over TLS · Topic clucknet/aws/data',
+      specs: 'MQTT over TLS · Topic-Based Pub/Sub Model',
       symbol: getAssetUrl('assets/symbols/iot_title.png'),
       rawSymbol: 'assets/symbols/iot_title.png'
     },

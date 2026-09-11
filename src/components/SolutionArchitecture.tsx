@@ -77,7 +77,7 @@ export const SolutionArchitecture: React.FC = () => {
       title: 'Cloud MQTT Broker',
       subtitle: 'AWS IoT Core',
       icon: Cloud,
-      badge: 'clucknet/aws/data',
+      badge: 'Topic-Based Pub/Sub Model',
       desc: 'High-throughput cloud MQTT broker handling publish-subscribe message queues over port 8883.',
       activeClass: 'bg-indigo-50/90 border-indigo-500 shadow-md ring-2 ring-indigo-500/20 scale-[1.02]',
       hoverClass: 'hover:border-indigo-500 hover:bg-indigo-50/50 hover:-translate-y-1.5 hover:shadow-lg',
